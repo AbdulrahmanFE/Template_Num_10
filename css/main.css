@@ -347,7 +347,7 @@
   header .center.header .list .relative:hover .account-dd-list {
     visibility: visible;
     opacity: 1;
-    transform: translateY(10px);
+    transform: translateY(0);
   }
   header .center.header .list .cart-dd-list li {
     display: flex;
@@ -443,6 +443,134 @@
   }
   header .center.header .list .account-dd-list i {
     margin-right: 10px;
+  }
+/* Styling The Bottom Header */
+  header .bottom.header .container{
+    width: calc(100% - 10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+  }
+  header .bottom.header .categories-container {
+    position: relative;
+  }
+  header .bottom.header .categories-container .categories-check {
+    display: none;
+  }
+  header .bottom.header .categories-container .categories-check + .categories-label {
+    background-color: var(--MainColor);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  header .bottom.header .categories-container .categories-check + .categories-label p {
+    display: inline-block;
+    margin: 0 10px 0 6px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  header .bottom.header .categories-container .categories-check + .categories-label .arrow-down {
+    font-size: 12px;
+    transition: var(--MainTransition);
+  }
+  header .bottom.header .categories-container .categories-check:checked + .categories-label .arrow-down {
+    transform: rotate(180deg);
+  }
+  header .bottom.header .categories-container .categories-dd-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFF;
+    min-width: 275px;
+    padding: 30px;
+    border: 1px solid #BCE3C9;
+    border-radius: 8px;
+    z-index: 2;
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    -moz-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--MainTransition);
+  }
+  header .bottom.header .categories-container .categories-check:checked ~ .categories-dd-list {
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 1;
+  }
+  header .bottom.header .categories-container .categories-dd-list .categories-content {
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+    gap: 0 15px;
+  }
+  header .bottom.header .categories-container .categories-dd-list .categories-content li {
+    padding: 10px 16px;
+    border: 1px solid #F2F3F4;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: var(--MainTransition);
+  }
+  header .bottom.header .categories-container .categories-dd-list .categories-content li:hover {
+    border-color: #BCE3C9;
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    -moz-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+  }
+  header .bottom.header .categories-container .categories-dd-list .categories-content a {
+    display: flex;
+    align-items: center;
+    color: var(--MainHeadingColor);
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--MainTransition);
+  }
+  header .bottom.header .categories-container .categories-dd-list .categories-content li:hover a {
+    color: var(--MainColor);
+  }
+  header .bottom.header .categories-container .categories-dd-list .categories-content img {
+    max-width: 25px;
+    margin-right: 15px;
+  }
+  header .bottom.header .categories-container .categories-dd-list .show.btn {
+    margin: 15px auto 0;
+    color: var(--MainHeadingColor);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  header .bottom.header .categories-container .categories-dd-list .show.btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--MainColor);
+    border-radius: 50%;
+    position: relative;
+  }
+  header .bottom.header .categories-container .categories-dd-list .show.btn span::before,
+  header .bottom.header .categories-container .categories-dd-list .show.btn span::after {
+    content: "";
+    position: absolute;
+    background-color: var(--MainColor);
+  }
+  header .bottom.header .categories-container .categories-dd-list .show.btn span::before {
+    width: 12px;
+    height: 2px;
+  }
+  header .bottom.header .categories-container .categories-dd-list .show.btn span::after {
+    height: 12px;
+    width: 2px;
   }
 /* ----- Making The Header Section Responsive ----- */
   @media (min-width: 992px) {
