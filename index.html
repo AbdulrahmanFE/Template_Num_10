@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Page icon -->
+    <link rel="icon" type="image" href="Images/logo.svg" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <meta 
+    http-equiv="X-UA-Compatible" 
+    content="IE=edge"
+    />
+    <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+    />
+    <meta 
+    name="description" 
+    content="Practice Front-End"
+    />
+    <meta name="Nest" content="v1.0" />
+    <title>Nest</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Top Header -->
+      <div class="top header">
+        <ul class="left list none">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+        <ul class="mid-list none">
+          <li>100% Secure delivery without contacting the courier</li>
+          <li>Supper Value Deals - Save more with coupons</li>
+          <li>Trendy 25silver jewelry, save up 35% off today</li>
+        </ul>
+        <ul class="right list none">
+          <li><a href="tel:+ 1800 900">Need help? Call Us : <span class="highlight"> + 1800 900</span></a></li>
+          <li class="hover">
+            <a href="#" class="arrow">English <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="menu">
+              <li>
+                <a href="#" title="Français">
+                  <img src="images/flag-fr.png" />
+                  Français
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Deutsch">
+                  <img src="images/flag-de.png" />
+                  Deutsch
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Pусский">
+                  <img src="images/flag-ru.png" />
+                  Pусский
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="hover">
+            <a href="#" class="arrow">USD <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="menu">
+              <li>
+                <a href="#">
+                  <img src="images/flag-fr.png" />
+                  INR
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/flag-de.png" />
+                  MBP
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/flag-ru.png" />
+                  EU
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="sale">
+          Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left
+        </p>
+      </div>
+      <!-- Center Header -->
+      <div class="center header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <img src="Images/logo.svg" alt="logo" class="logo-img" />
+          </a>
+          <div class="search-form">
+            <p class="categories-title">All Categories <i class="fa-solid fa-angle-down"></i></p>
+            <form>
+              <input type="search" name="search" placeholder="Search for items..." class="search-field" />
+              <button class="search btn" type="submit" aria-label="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          <div class="location-list">
+            <i class="fa-solid fa-globe"></i>
+            <span class="highlight">Your Location</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <ul class="list">
+            <li><a href="#"><div class="image three"><img src="Images/icon-compare.svg" alt="icon-compare" /></div>compare</a></li>
+            <li><a href="#"><div class="image six"><img src="Images/icon-heart.svg" alt="icon-compare" /></div>wishlist</a></li>
+            <li class="relative">
+              <a href="#"><div class="image two"><img src="Images/icon-cart.svg" alt="icon-compare" /></div>cart</a>
+              <div class="cart-dd-list">
+                <ul>
+                  <li>
+                    <div class="producer-image"><img src="Images/mango-juice.jpg" alt="mango-juice" /></div>
+                    <div class="producer-content">
+                      <h3 class="producer-title">Daisy Casual Bag</h3>
+                      <h4 class="producer-price"><span>1 × </span>$800.00</h4>
+                    </div>
+                    <div class="producer-del">
+                      <button class="del btn" type="button" aria-label="Delete"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="producer-image"><img src="Images/pepper.jpg" alt="paper" /></div>
+                    <div class="producer-content">
+                      <h3 class="producer-title">Corduroy Shirts</h3>
+                      <h4 class="producer-price"><span>1 × </span>$3200.00</h4>
+                    </div>
+                    <div class="producer-del">
+                      <button class="del btn" type="button" aria-label="Delete"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="cart-total">
+                  <p>Total <span>$4000.00</span></p>
+                </div>
+                <div class="cart-buttons">
+                  <a href="#" class="view btn">view cart</a>
+                  <a href="#" class="checkout btn">Checkout</a>
+                </div>
+              </div>
+            </li>
+            <li class="relative">
+              <a href="#"><img src="Images/icon-user.svg" alt="icon-user" />account</a>
+              <div class="account-dd-list">
+                <ul>
+                  <li><a href="#"><i class="fa-regular fa-user"></i>My Account</a></li>
+                  <li><a href="#"><i class="fa-solid fa-truck"></i>Order Tracking</a></li>
+                  <li><a href="#"><i class="fa-solid fa-file-invoice-dollar"></i>My Voucher</a></li>
+                  <li><a href="#"><i class="fa-regular fa-heart"></i>My Wishlist</a></li>
+                  <li><a href="#"><i class="fa-solid fa-sliders"></i>Setting</a></li>
+                  <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Header -->
+    </header>
+  </body>
+</html>
