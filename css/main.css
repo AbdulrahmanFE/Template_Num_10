@@ -578,7 +578,8 @@
     padding: 0 15px;
     line-height: 70px;
   }
-  header .bottom.header .links > li > a {
+  header .bottom.header .links > li > a,
+  header .mobile.header .links > li > a {
     color: var(--MainHeadingColor);
     font-weight: 700;
     font-size: 1rem;
@@ -588,17 +589,20 @@
     justify-content: center;
     gap: 4px;
   }
-  header .bottom.header .links > li:hover > a {
+  header .bottom.header .links > li:hover > a,
+  header .mobile.header .links > li:hover > a {
     color: var(--MainColor);
   }
   header .bottom.header .links > li > a > img {
     margin-right: 4px;
   }
-  header .bottom.header .links > li > a > i {
+  header .bottom.header .links > li > a > i,
+  header .mobile.header .links > li > a > i {
     font-size: 10px;
     transition: var(--MainTransition);
   }
-  header .bottom.header .links > li:hover > a > i {
+  header .bottom.header .links > li:hover > a > i,
+  header .mobile.header .links > li:hover > a > i {
     transform: rotate(180deg);
     color: var(--MainColor);
   }
@@ -790,9 +794,153 @@
     color: var(--MainTextColor);
     letter-spacing: 1px;
   }
+/* Styling The Mobile Header */
+  header .mobile.header {
+    padding: 20px 0;
+    background-color: #FFF;
+  }
+  header .mobile.header .container {
+    display: flex;
+    position: relative;
+  }
+  header .mobile.header .logo-img {
+    width: 150px;
+    object-fit: cover;
+  }
+  header .mobile.header .check {
+    display: none;
+  }
+  header .mobile.header .check + .burger {
+    width: 26px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    cursor: pointer;
+  }
+  header .mobile.header .check + .burger span {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    transition: var(--MainTransition);
+  }
+  header .mobile.header .check + .burger span:first-child {
+    top: 0;
+  }
+  header .mobile.header .check:checked + .burger span:first-child { /* :Checked */
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  header .mobile.header .check + .burger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header .mobile.header .check:checked + .burger span:nth-child(2) { /* :Checked */
+    display: none;
+  }
+  header .mobile.header .check + .burger span:last-child {
+    bottom: 0;
+  }
+  header .mobile.header .check:checked + .burger span:last-child { /* :Checked */
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  header .mobile.header .links {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    width: 75%;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #ececec;
+    z-index: 99;
+    -webkit-box-shadow: 0px 4px 10px rgb(0 0 0 / 6%);
+    -moz-box-shadow: 0px 4px 10px rgb(0 0 0 / 6%);
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 6%);
+    border-radius: 0 0 4px 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--MainTransition) linear;
+  }
+  header .mobile.header .check:checked ~ .links {
+    visibility: visible;
+    opacity: 1;
+  }
+  header .mobile.header ul > li {
+    display: block;
+    padding: 10px;
+  }
+  header .mobile.header ul > li:not(:last-child) {
+    border-bottom: 1px solid #ececec;
+  }
+  header .mobile.header .links > li > a {
+    justify-content: space-between;
+  }
+  header .mobile.header .links > li:hover > a > i {
+    color: var(--MainHeadingColor);
+  }
+/* --|-- DropDown List For Mega Menu / Pages */
+  header .mobile.header .links li .mage-menu,
+  header .mobile.header .links li .mage-menu .sub-menu .list-menu,
+  header .mobile.header .links li .page-list {
+    display: none;
+    padding: 10px 0 0 10px;
+    transition: var(--MainTransition) linear;
+  }
+  header .mobile.header .links li:hover .mage-menu,
+  header .mobile.header .links li:hover .page-list {
+    display: block;
+  }
+  header .mobile.header .links li:hover .mage-menu .sub-menu {
+    padding: 10px 0;
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .check + .menu-title,
+  header .mobile.header .links li .mage-menu .sub-menu .list-menu li a,
+  header .mobile.header .links li .page-list li a {
+    line-height: 1;
+    color: var(--MainHeadingColor);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--MainTransition);
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .check:checked + .menu-title,
+  header .mobile.header .links li .mage-menu .sub-menu .list-menu li:hover a,
+  header .mobile.header .links li .page-list li:hover a {
+    color: var(--MainColor);
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .check + .menu-title i {
+    font-size: 10px;
+    color: var(--MainHeadingColor);
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .check:checked + .menu-title i {
+    transform: rotate(180deg);
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .check:checked ~ .list-menu {
+    display: block;
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .list-menu li,
+  header .mobile.header .links li .page-list li {
+    border-bottom: none;
+    padding: 10px 0;
+  }
+  header .mobile.header .links li .mage-menu .sub-menu .list-menu li a,
+  header .mobile.header .links li .page-list li a {
+    display: block;
+  }
 /* ----- Making The Header Section Responsive ----- */
   @media (min-width: 768px) {
     header .top.header .sale {
+      display: none;
+    }
+    header .mobile.header {
       display: none;
     }
   }
@@ -882,6 +1030,10 @@
       font-size: 14px;
       padding: 8px;
       border-bottom-color: var(--MainColor);
+    }
+    header .center.header,
+    header .bottom.header {
+      display: none;
     }
   }
   @media (max-width: 375px) {
