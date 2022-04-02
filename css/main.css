@@ -1041,8 +1041,514 @@
       font-size: 12px;
     }
   }
+/* Styling The Slider Section */
+  section.slider {
+    padding-top: var(--MainPaddingTop);
+    padding-bottom: var(--MainPaddingBottom);
+    position: relative;
+  }
+  section.slider .container {
+    width: 100%;
+  }
+  section.slider .slider-background {
+    width: 100%;
+    background-image: url(../Images/slider-1.png);
+    background-size: cover;
+    height: 525px;
+    border-radius: 30px;
+    background-position: center center;
+    animation: change-background 10s linear infinite;
+  }
+  section.slider .slider-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7%;
+  }
+  section.slider .slider-content .slider-title {
+    color: var(--MainHeadingColor);
+    font-size: 4.5rem;
+    max-width: 700px;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  section.slider .slider-content .slider-des {
+    font-family: var(--LatoFontsFamily);
+    font-size: 2rem;
+    color: var(--MainTextColor);
+    margin-bottom: 64px;
+  }
+  section.slider .slider-content form {
+    display: flex;
+    background-color: #FFF;
+    max-width: 450px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  section.slider .slider-content .input-e {
+    border: none;
+    background: none;
+    flex-basis: 65%;
+    padding: 20px 0 20px 20px;
+    font-size: 16px;
+    color: var(--MainHeadingColor);
+    caret-color: var(--MainHeadingColor);
+    font-family: var(--LatoFontsFamily);
+    border-radius: 50px 0 0 50px;
+  }
+  section.slider .slider-content .input-e:focus {
+    outline: none;
+  }
+  section.slider .slider-content .sub.btn {
+    background: linear-gradient(to left, var(--MainColor) 50%, #29A56C 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    color: #FFF;
+    flex-basis: 35%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  section.slider .slider-content .sub.btn:hover {
+    background-position: left bottom;
+  }
+  section.slider .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(var(--MainPaddingBottom) + 15px);
+    display: flex;
+    gap: 6px;
+  }
+  section.slider .bullets li {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--MainHeadingColor);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  section.slider .bullets li:first-of-type {
+    border-color: var(--MainColor);
+    background-color: var(--MainColor);
+  }
+  section.slider .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--MainHeadingColor);
+    background: #F2F3F4;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--MainTransition);
+  }
+  section.slider .arrow:hover {
+    background-color: var(--MainColor);
+    color: #FFF;
+  }
+  section.slider .right.arrow {
+    right: 20px;
+  }
+  section.slider .left.arrow {
+    left: 20px;
+  }
+/* ----- Making The Slider Section Responsive ----- */
+  @media (max-width: 1400px) {
+    section.slider .slider-background {
+      height: 450px;
+    }
+    section.slider .slider-content .slider-title {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 991px) {
+    section.slider .slider-background {
+      height: 350px;
+    }
+    section.slider .slider-content .slider-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+    section.slider .slider-content .slider-des {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    section.slider .arrow {
+      display: none;
+    }
+  }
+  @media (max-width: 575px) {
+    section.slider .slider-content .slider-title {
+      font-size: 2rem;
+      max-width: 400px;
+    }
+    section.slider .slider-content .slider-des {
+      font-size: 1.125rem;
+    }
+  }
+  @media (max-width: 475px) {
+    section.slider .slider-content form {
+      flex-direction: column;
+      background-color: unset;
+      max-width: unset;
+      border-radius: unset;
+      overflow: unset;
+    }
+    section.slider .slider-content .input-e {
+      background: #FFF;
+      border-radius: 10px;
+      max-width: 325px;
+    }
+    section.slider .slider-content .sub.btn {
+      padding: 14px 18px;
+      width: 150px;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 375px) {
+    section.slider .slider-content .slider-title {
+      font-size: 1.6rem;
+      max-width: 320px;
+    }
+    section.slider .slider-content .input-e {
+      max-width: 265px;
+    }
+  }
+/* ------- Components Section Heading ------- */
+  .main-section-heading,
+  .main-section-heading .main-section-filter {
+    display: flex;
+    align-items: center;
+  }
+  .main-section-heading {
+    justify-content: space-between;
+  }
+  .main-section-heading h2.main-section-title {
+    font-size: 32px;
+    margin: 0;
+    color: var(--MainHeadingColor);
+  }
+  .main-section-heading .main-section-filter {
+    gap:  14px 10px;
+    flex-wrap: wrap;
+  }
+  .main-section-heading .main-section-filter .filter.btn  {
+    display: block;
+    color: var(--MainHeadingColor);
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--MainTransition);
+  }
+  .main-section-heading .main-section-filter .filter.btn:hover {
+    color: var(--MainColor);
+    transform: translateY(-4px);
+  }
+/* ----- Making The Section Heading Responsive ----- */
+  @media (min-width:992px) {
+    .main-section-heading .main-section-filter li:first-of-type .filter.btn {
+      padding-left: 0 !important;
+    }
+  }
+  @media (max-width: 991px) {
+    .main-section-heading {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .main-section-heading h2.main-section-title {
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 575px) {
+    .main-section-heading h2.main-section-title {
+      font-size: 26px;
+    }
+  }
+/* Styling The Featured Section */
+  section.featured {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.featured .main-section-heading .content{
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+  }
+  section.featured .main-section-heading .arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section.featured .main-section-heading .arrows > i {
+    font-size: 20px;
+    color: var(--MainTextColor);
+    background: #F2F3F4;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--MainTransition);
+  }
+  section.featured .main-section-heading .arrows > i:hover {
+    background-color: var(--MainColor);
+    color: #FFF;
+  }
+  section.featured .feat-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  section.featured .feat-categories .feat-cate {
+    width: 130px;
+    min-height: 175px;
+    background-color: var(--clr);
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #F4F6FA;
+    border-radius: 8px;
+    transition: var(--MainTransition);
+  }
+  section.featured .feat-categories .feat-cate:hover {
+    border-color: #BCE3C9;
+  }
+  section.featured .feat-categories .feat-cate img {
+    width: 80px;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: var(--MainTransition);
+  }
+  section.featured .feat-categories .feat-cate:hover img {
+    transform: scale(1.1);
+  }
+  section.featured .feat-categories .feat-cate a {
+    display: block;
+    color: var(--MainHeadingColor);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    transition: var(--MainTransition);
+  }
+  section.featured .feat-categories .feat-cate:hover a {
+    color: var(--MainColor);
+  }
+  section.featured .feat-categories .feat-cate span {
+    font-family: var(--LatoFontsFamily);
+    font-size: 14px;
+    color: var(--MainTextColor);
+  }
+/* ----- Making The Featured Section Responsive ----- */
+  @media (max-width: 1299px) {
+    section.featured .feat-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    section.featured .feat-categories .feat-cate {
+      width: 100%;
+    }
+  }
+  @media (max-width: 991px) {
+    section.featured .main-section-heading .arrows {
+      display: none;
+    }
+    section.featured .main-section-heading .content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 499px) {
+    section.featured .feat-categories {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+  }
+/* Styling The Banners Section */
+  section.banners {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  section.banners .banner {
+    width: 400px;
+    height: 230px;
+    padding: 30px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+  }
+  section.banners .banner.fresh {
+    background-image: url(../Images/banner-fresh.png);
+  }
+  section.banners .banner.breakfast {
+    background-image: url(../Images/banner-breakfast.png);
+  }
+  section.banners .banner.org {
+    background-image: url(../Images/banner-org.png);
+  }
+  section.banners .banner .banner-title {
+    color: var(--MainHeadingColor);
+    font-size: 24px;
+    margin: 10px 0 30px;
+    min-height: 85px;
+    max-width: 300px;
+    transition: var(--MainTransition);
+  }
+  section.banners .banner .shop.btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 10px;
+    background: linear-gradient(to left, var(--MainColor) 50%, var(--MainAltColor) 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    display: inline-block;
+    color: #FFF;
+    border-radius: 4px;
+    transition: var(--MainTransition);
+  }
+  section.banners .banner .shop.btn:hover {
+    background-position: left bottom;
+  }
+  section.banners .banner .shop.btn i {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: var(--MainTransition);
+  }
+  section.banners .banner .shop.btn:hover i{
+    margin-left: 8px;
+  }
+/* ----- Making The Banners Section Responsive ----- */
+  @media (max-width: 1199px) {
+    section.banners .banner {
+      max-width: 450px;
+      width: 100%;
+      padding: 40px 20px;
+    }
+  }
+/* Styling The Products Section */
+  section.products {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.products .main-section-filter li:first-child .filter.btn {
+    color: var(--MainColor);
+  }
+  section.products .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.8%, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  section.products .products-container .prod-box {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    padding: 20px 14px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--MainTransition);
+  }
+  section.products .products-container .prod-box:hover {
+    border-color: #BCE3C9;
+  }
+  section.products .products-container .prod-box .bar {
+    background-color: var(--clr);
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px 0 20px 0;
+    font-family: var(--LatoFontsFamily);
+    font-size: 12px;
+    z-index: 11;
+  }
+  section.products .products-container .prod-box .images-content {
+    position: relative;
+    text-align: center;
+  }
+  section.products .products-container .prod-box img {
+    width: 200px;
+  }
+  section.products .products-container .prod-box .back-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--MainTransition) ease-in-out;
+  }
+  section.products .products-container .prod-box:hover .back-img {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1.05);
+  }
+  section.products .products-container .prod-box .wishlist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    border-radius: 4px;
+    border: 1px solid #BCE3C9;
+    z-index: 8;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--MainTransition);
+  }
+  section.products .products-container .prod-box:hover .wishlist {
+    opacity: 1;
+    visibility: visible;
+  }
+  section.products .products-container .prod-box .wishlist a {
+    color: var(--MainColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-right: 1px solid #BCE3C9;
+    font-size: 16px;
+    position: relative;
+    transition: var(--MainTransition);
+  }
+  /* section.products .products-container .prod-box .wishlist a::before,
+  section.products .products-container .prod-box .wishlist a::after {
+    Here
+  } */
+  section.products .products-container .prod-box .wishlist a:hover {
+    color: var(--MainAltColor);
+  }
+  section.products .products-container .prod-box .wishlist a:last-child {
+    border-right: none;
+  }
+/* ----- Making The Products Section Responsive ----- */
+
 /* ------ Animation ------ */
-/* -------- Change Animation -------- */
+/* -------- Change Text Animation -------- */
   @keyframes change-text {
     0% {
       transform: translateY(10px);
@@ -1064,5 +1570,14 @@
     }
     90%, 100% {
       transform: translateY(-45px);
+    }
+  }
+  /* -------- Change Background Animation -------- */
+  @keyframes change-background {
+    0%, 100% {
+      background-image: url(../Images/slider-1.png);
+    }
+    50% {
+      background-image: url(../Images/slider-2.png);
     }
   }
