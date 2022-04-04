@@ -1226,10 +1226,11 @@
   .main-section-heading,
   .main-section-heading .main-section-filter {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
   .main-section-heading {
     justify-content: space-between;
+    margin-bottom: 40px;
   }
   .main-section-heading h2.main-section-title {
     font-size: 32px;
@@ -1251,6 +1252,9 @@
   .main-section-heading .main-section-filter .filter.btn:hover {
     color: var(--MainColor);
     transform: translateY(-4px);
+  }
+  .main-section-heading .main-section-filter .filter.btn.active {
+    color: var(--MainColor);
   }
 /* ----- Making The Section Heading Responsive ----- */
   @media (min-width:992px) {
@@ -1312,7 +1316,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 30px;
   }
   section.featured .feat-categories .feat-cate {
     width: 130px;
@@ -1376,6 +1379,29 @@
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
   }
+/* ------- Components Shop Button ------- */
+  .shop.btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 10px;
+    background: linear-gradient(to left, var(--MainColor) 50%, var(--MainAltColor) 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    display: inline-block;
+    color: #FFF;
+    border-radius: 4px;
+  }
+  .shop.btn:hover {
+    background-position: left bottom;
+  }
+  .shop.btn i {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: var(--MainTransition);
+  }
+  .shop.btn:hover i{
+    margin-left: 8px;
+  }
 /* Styling The Banners Section */
   section.banners {
     padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
@@ -1410,29 +1436,6 @@
     max-width: 300px;
     transition: var(--MainTransition);
   }
-  section.banners .banner .shop.btn {
-    font-size: 12px;
-    font-weight: 700;
-    padding: 8px 10px;
-    background: linear-gradient(to left, var(--MainColor) 50%, var(--MainAltColor) 50%);
-    background-position: right bottom;
-    background-size: 200% 100%;
-    display: inline-block;
-    color: #FFF;
-    border-radius: 4px;
-    transition: var(--MainTransition);
-  }
-  section.banners .banner .shop.btn:hover {
-    background-position: left bottom;
-  }
-  section.banners .banner .shop.btn i {
-    font-size: 10px;
-    margin-left: 4px;
-    transition: var(--MainTransition);
-  }
-  section.banners .banner .shop.btn:hover i{
-    margin-left: 8px;
-  }
 /* ----- Making The Banners Section Responsive ----- */
   @media (max-width: 1199px) {
     section.banners .banner {
@@ -1441,32 +1444,8 @@
       padding: 40px 20px;
     }
   }
-/* Styling The Products Section */
-  section.products {
-    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
-  }
-  section.products .main-section-filter li:first-child .filter.btn {
-    color: var(--MainColor);
-  }
-  section.products .products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18.8%, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-  }
-  section.products .products-container .prod-box {
-    width: 100%;
-    background-color: #FFF;
-    border: 1px solid #ececec;
-    border-radius: 14px;
-    overflow: hidden;
-    position: relative;
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box:hover {
-    border-color: #BCE3C9;
-  }
-  section.products .products-container .prod-box .bar {
+/* ------- Components Discount Bar ------- */
+  span.bar {
     background-color: var(--clr);
     color: #FFF;
     position: absolute;
@@ -1482,13 +1461,42 @@
     font-size: 12px;
     z-index: 11;
   }
-  section.products .products-container .prod-box .images-content {
+/*
+------- Styling The Products Section -------
+------- Styling The Daily Section -------
+*/
+  section.products,
+  section.daily {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.products .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.8%, 1fr));
+    gap: 20px;
+  }
+  section.products .products-container .prod-box,
+  section.daily .daily-container .box {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--MainTransition);
+  }
+  section.products .products-container .prod-box:hover,
+  section.daily .daily-container .box:hover {
+    border-color: #BCE3C9;
+  }
+  section.products .products-container .prod-box .images-content,
+  section.daily .daily-container .box .images-content {
     position: relative;
     padding: 25px 25px 0;
-    width: 293.8px;
+    width: auto;
     height: 228.39px;
   }
-  section.products .products-container .prod-box .images-content img {
+  section.products .products-container .prod-box .images-content img,
+  section.daily .daily-container .box .images-content img {
     width: 200px;
     position: absolute;
     top: 50%;
@@ -1496,17 +1504,20 @@
     transform: translate(-50%, -50%);
     cursor: pointer;
   }
-  section.products .products-container .prod-box .images-content .back-img {
+  section.products .products-container .prod-box .images-content .back-img,
+  section.daily .daily-container .box .images-content .back-img {
     z-index: 2;
     visibility: hidden;
     opacity: 0;
     transition: var(--MainTransition);
   }
-  section.products .products-container .prod-box:hover .back-img {
+  section.products .products-container .prod-box:hover .images-content .back-img,
+  section.daily .daily-container .box:hover .images-content .back-img {
     visibility: visible;
     opacity: 1;
   }
-  section.products .products-container .prod-box .wishlist {
+  section.products .products-container .prod-box .wishlist,
+  section.daily .daily-container .box .wishlist {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1520,11 +1531,13 @@
     visibility: hidden;
     transition: var(--MainTransition);
   }
-  section.products .products-container .prod-box:hover .wishlist {
+  section.products .products-container .prod-box:hover .wishlist,
+  section.daily .daily-container .box:hover .wishlist {
     opacity: 1;
     visibility: visible;
   }
-  section.products .products-container .prod-box .wishlist a {
+  section.products .products-container .prod-box .wishlist a,
+  section.daily .daily-container .box .wishlist a {
     color: var(--MainColor);
     display: flex;
     align-items: center;
@@ -1536,14 +1549,18 @@
     position: relative;
     transition: var(--MainTransition);
   }
-  section.products .products-container .prod-box .wishlist a:hover {
+  section.products .products-container .prod-box .wishlist a:hover,
+  section.daily .daily-container .box .wishlist a:hover {
     color: var(--MainAltColor);
   }
-  section.products .products-container .prod-box .wishlist a:last-child {
+  section.products .products-container .prod-box .wishlist a:last-child,
+  section.daily .daily-container .box .wishlist a:last-child {
     border-right: none;
   }
   section.products .products-container .prod-box .wishlist a::before,
-  section.products .products-container .prod-box .wishlist a::after {
+  section.products .products-container .prod-box .wishlist a::after,
+  section.daily .daily-container .box .wishlist a::before,
+  section.daily .daily-container .box .wishlist a::after {
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -1553,11 +1570,14 @@
     transition: var(--MainTransition) ease;
   }
   section.products .products-container .prod-box .wishlist a:hover::before,
-  section.products .products-container .prod-box .wishlist a:hover::after {
+  section.products .products-container .prod-box .wishlist a:hover::after,
+  section.daily .daily-container .box .wishlist a:hover::before,
+  section.daily .daily-container .box .wishlist a:hover::after {
     opacity: 1;
     visibility: visible;
   }
-  section.products .products-container .prod-box .wishlist a::before {
+  section.products .products-container .prod-box .wishlist a::before,
+  section.daily .daily-container .box .wishlist a::before {
     content: attr(aria-label);
     background-color: var(--MainColor);
     color: white;
@@ -1566,32 +1586,39 @@
     padding: 8px 10px;
     border-radius: 4px;
   }
-  section.products .products-container .prod-box .wishlist a:hover::before {
+  section.products .products-container .prod-box .wishlist a:hover::before,
+  section.daily .daily-container .box .wishlist a:hover::before {
     transform: translate(-50%, -14px);
   }
-  section.products .products-container .prod-box .wishlist a::after {
+  section.products .products-container .prod-box .wishlist a::after,
+  section.daily .daily-container .box .wishlist a::after {
     content: "";
     border-width: 8px;
     border-style: solid;
     border-color: var(--MainColor) transparent transparent;
     transform: translate(-50%, 14px);
   }
-  section.products .products-container .prod-box .wishlist a:hover:after {
+  section.products .products-container .prod-box .wishlist a:hover:after,
+  section.daily .daily-container .box .wishlist a:hover::after {
     transform: translate(-50%, 0);
   }
-  section.products .products-container .prod-box .content {
+  section.products .products-container .prod-box .content,
+  section.daily .daily-container .box .content {
     padding: 0 20px 20px;
   }
-  section.products .products-container .prod-box .content .type {
+  section.products .products-container .prod-box .content .type,
+  section.daily .daily-container .box .content .type {
     font-size: 12px;
     color: #999;
     font-family: var(--LatoFontsFamily);
     transition: var(--MainTransition);
   }
-  section.products .products-container .prod-box .content .type:hover {
+  section.products .products-container .prod-box .content .type:hover,
+  section.daily .daily-container .box .content .type:hover {
     color: var(--MainColor);
   }
-  section.products .products-container .prod-box .content .prod-title {
+  section.products .products-container .prod-box .content .prod-title,
+  section.daily .daily-container .box .content .prod-title {
     color: var(--MainHeadingColor);
     display: block;
     font-weight: 700;
@@ -1599,21 +1626,26 @@
     margin: 6px 0 8px;
     transition: var(--MainTransition);
   }
-  section.products .products-container .prod-box .content .prod-title:hover {
+  section.products .products-container .prod-box .content .prod-title:hover,
+  section.daily .daily-container .box .content .prod-title:hover {
     color: var(--MainColor);
   }
-  section.products .products-container .prod-box .content .rate {
+  section.products .products-container .prod-box .content .rate,
+  section.daily .daily-container .box .content .rate {
     display: flex;
     align-items: center;
     gap: 1px;
   }
-  section.products .products-container .prod-box .content .rate i {
+  section.products .products-container .prod-box .content .rate i,
+  section.daily .daily-container .box .content .rate i{
     font-size: 12px;
   }
-  section.products .products-container .prod-box .content .rate i.filled {
+  section.products .products-container .prod-box .content .rate i.filled,
+  section.daily .daily-container .box .content .rate i.filled {
     color: #fdc040;
   }
-  section.products .products-container .prod-box .content .rate i.empty {
+  section.products .products-container .prod-box .content .rate i.empty,
+  section.daily .daily-container .box .content .rate i.empty {
     color: #d1d1d1;
   }
   section.products .products-container .prod-box .content .rate .rate-num {
@@ -1628,7 +1660,8 @@
   section.products .products-container .prod-box .content .by {
     margin-top: 6px;
   }
-  section.products .products-container .prod-box .content .highlight {
+  section.products .products-container .prod-box .content .highlight,
+  section.daily .daily-container .box .content .highlight {
     color: var(--MainColor);
     transition: var(--MainTransition);
   }
@@ -1641,18 +1674,21 @@
     align-items: baseline;
     margin-top: 16px;
   }
-  section.products .products-container .prod-box .content .prod-box-bottom .new-price {
+  section.products .products-container .prod-box .content .prod-box-bottom .new-price,
+  section.daily .daily-container .box .content .new-price {
     font-size: 18px;
     font-weight: 700;
   }
-  section.products .products-container .prod-box .content .prod-box-bottom .old-price {
+  section.products .products-container .prod-box .content .prod-box-bottom .old-price,
+  section.daily .daily-container .box .content .old-price {
     text-decoration: line-through;
     font-size: 14px;
     color: #adadad;
     font-weight: 700;
     margin-left: 6px;
   }
-  section.products .products-container .prod-box .content .prod-box-bottom .add.btn {
+  section.products .products-container .prod-box .content .prod-box-bottom .add.btn,
+  section.daily .daily-container .box .content .add.btn {
     color: var(--MainColor);
     background-color: #DEF9EC;
     padding: 8px 16px;
@@ -1660,12 +1696,135 @@
     font-weight: 700;
     border-radius: 4px;
   }
-  section.products .products-container .prod-box .content .prod-box-bottom .add.btn:hover {
+  section.products .products-container .prod-box .content .prod-box-bottom .add.btn:hover,
+  section.daily .daily-container .box .content .add.btn:hover {
     background-color: var(--MainColor);
     color: #FFF;
     transform: translateY(-4px);
   }
+  section.products .products-container .prod-box .content .prod-box-bottom .add.btn i,
+  section.daily .daily-container .box .content .add.btn i {
+    margin-right: 4px;
+  }
 /* ----- Making The Products Section Responsive ----- */
+  @media (max-width: 1024px) {
+    section.products .products-container {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+  @media (max-width: 575px) {
+    section.products .products-container .prod-box {
+      max-width: 325px;
+      margin: 0 auto;
+    }
+  }
+/* Styling The Daily Section */
+  section.daily .daily-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.daily .daily-banner {
+    width: 25%;
+    padding-right: 24px;
+  }
+  section.daily .daily-banner .banner-img {
+    background-image: url(../Images/banner-daily.png);
+    background-size: cover;
+    width: 100%;
+    height: 466.72px;
+    background-position: center bottom;
+    border-radius: 14px;
+  }
+  section.daily .daily-banner .banner-content {
+    padding: 60px 40px;
+  }
+  section.daily .daily-banner .banner-title {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    font-weight: 700;
+    max-width: 85%;
+    margin-bottom: 75px;
+  }
+  section.daily .daily-container .boxes {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    position: relative;
+  }
+  section.daily .daily-container .box .bar {
+    width: auto;
+    padding: 10px 20px;
+  }
+  section.daily .daily-container .box .content .price {
+    margin-top: 15px;
+  }
+  section.daily .daily-container .box .content .sold-content {
+    margin: 15px 0;
+  }
+  section.daily .daily-container .box .content .sold-content .prog-holder {
+    background-color: #e9ecef;
+    width: 100%;
+    height: 6px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+  section.daily .daily-container .box .content .sold-content .prog-holder .prog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--MainColor);
+    height: 100%;
+  }
+  section.daily .daily-container .box .content .sold-content .sold {
+    font-family: var(--LatoFontsFamily);
+    font-size: 14px;
+    color: var(--MainHeadingColor);
+  }
+  section.daily .daily-container .box .content .add.btn {
+    background-color: var(--MainColor);
+    color: white;
+    width: 100%;
+    padding: 12px 30px;
+  }
+  section.daily .daily-container .box .content .add.btn:hover {
+    background-color: var(--MainAltColor);
+  }
+  section.daily .daily-container .arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    background-color: #F2F3F4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--MainHeadingColor);
+    transition: var(--MainTransition);
+  }
+  section.daily .daily-container .arrow:hover {
+    background-color: var(--MainColor);
+    color: #FFF;
+  }
+  section.daily .daily-container .left.arrow {
+    left: 10px;
+  }
+  section.daily .daily-container .right.arrow {
+    right: 10px;
+  }
+/* ----- Making The Daily Section Responsive ----- */
+  @media (max-width: 1024px) {
+    section.daily .daily-banner {
+      display: none;
+    }
+  }
 /* ------ Animation ------ */
 /* -------- Change Text Animation -------- */
   @keyframes change-text {
