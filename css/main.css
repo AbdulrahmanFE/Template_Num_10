@@ -1461,12 +1461,31 @@
     font-size: 12px;
     z-index: 11;
   }
+/* ------- Components Add Button ------- */
+  .add.btn {
+    color: var(--MainColor);
+    background-color: #DEF9EC;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+  }
+  .add.btn:hover {
+    background-color: var(--MainColor);
+    color: #FFF;
+    transform: translateY(-4px);
+  }
+  .add.btn i {
+    margin-right: 4px;
+  }
 /*
 ------- Styling The Products Section -------
-------- Styling The Daily Section -------
+------- Styling The Daily Section (Just The Common Styles) -------
+------- Styling The Deals Section (Just The Common Styles) -------
 */
   section.products,
-  section.daily {
+  section.daily,
+  section.deals {
     padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
   }
   section.products .products-container {
@@ -1618,7 +1637,8 @@
     color: var(--MainColor);
   }
   section.products .products-container .prod-box .content .prod-title,
-  section.daily .daily-container .box .content .prod-title {
+  section.daily .daily-container .box .content .prod-title,
+  section.deals .deals-container .box .deal-info .deal-title {
     color: var(--MainHeadingColor);
     display: block;
     font-weight: 700;
@@ -1627,84 +1647,79 @@
     transition: var(--MainTransition);
   }
   section.products .products-container .prod-box .content .prod-title:hover,
-  section.daily .daily-container .box .content .prod-title:hover {
+  section.daily .daily-container .box .content .prod-title:hover,
+  section.deals .deals-container .box .deal-info .deal-title:hover {
     color: var(--MainColor);
   }
   section.products .products-container .prod-box .content .rate,
-  section.daily .daily-container .box .content .rate {
+  section.daily .daily-container .box .content .rate,
+  section.deals .deals-container .box .deal-info .rate {
     display: flex;
     align-items: center;
     gap: 1px;
   }
   section.products .products-container .prod-box .content .rate i,
-  section.daily .daily-container .box .content .rate i{
+  section.daily .daily-container .box .content .rate i,
+  section.deals .deals-container .box .deal-info .rate i {
     font-size: 12px;
   }
   section.products .products-container .prod-box .content .rate i.filled,
-  section.daily .daily-container .box .content .rate i.filled {
+  section.daily .daily-container .box .content .rate i.filled,
+  section.deals .deals-container .box .deal-info .rate i.filled {
     color: #fdc040;
   }
   section.products .products-container .prod-box .content .rate i.empty,
-  section.daily .daily-container .box .content .rate i.empty {
+  section.daily .daily-container .box .content .rate i.empty,
+  section.deals .deals-container .box .deal-info .rate i.empty {
     color: #d1d1d1;
   }
-  section.products .products-container .prod-box .content .rate .rate-num {
+  section.products .products-container .prod-box .content .rate .rate-num,
+  section.deals .deals-container .box .deal-info .rate .rate-num {
     margin-left: 4px;
   }
   section.products .products-container .prod-box .content .rate .rate-num,
-  section.products .products-container .prod-box .content .by{
+  section.products .products-container .prod-box .content .by,
+  section.deals .deals-container .box .deal-info .rate .rate-num,
+  section.deals .deals-container .box .deal-info .by {
     font-size: 14px;
     color: #B6B6B6;
     font-family: var(--LatoFontsFamily);
   }
-  section.products .products-container .prod-box .content .by {
+  section.products .products-container .prod-box .content .by,
+  section.deals .deals-container .box .deal-info .by{
     margin-top: 6px;
   }
   section.products .products-container .prod-box .content .highlight,
-  section.daily .daily-container .box .content .highlight {
+  section.daily .daily-container .box .content .highlight,
+  section.deals .deals-container .box .deal-info .highlight {
     color: var(--MainColor);
     transition: var(--MainTransition);
   }
-  section.products .products-container .prod-box .content .by .highlight:hover {
+  section.products .products-container .prod-box .content .by .highlight:hover,
+  section.deals .deals-container .box .deal-info .by .highlight:hover {
     color: var(--MainAltColor);
   }
-  section.products .products-container .prod-box .content .prod-box-bottom {
+  section.products .products-container .prod-box .content .prod-box-bottom,
+  section.deals .deals-container .box .deal-info .purchase-content {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-top: 16px;
   }
   section.products .products-container .prod-box .content .prod-box-bottom .new-price,
-  section.daily .daily-container .box .content .new-price {
+  section.daily .daily-container .box .content .new-price,
+  section.deals .deals-container .box .deal-info .new-price {
     font-size: 18px;
     font-weight: 700;
   }
   section.products .products-container .prod-box .content .prod-box-bottom .old-price,
-  section.daily .daily-container .box .content .old-price {
+  section.daily .daily-container .box .content .old-price,
+  section.deals .deals-container .box .deal-info .old-price {
     text-decoration: line-through;
     font-size: 14px;
     color: #adadad;
     font-weight: 700;
     margin-left: 6px;
-  }
-  section.products .products-container .prod-box .content .prod-box-bottom .add.btn,
-  section.daily .daily-container .box .content .add.btn {
-    color: var(--MainColor);
-    background-color: #DEF9EC;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 4px;
-  }
-  section.products .products-container .prod-box .content .prod-box-bottom .add.btn:hover,
-  section.daily .daily-container .box .content .add.btn:hover {
-    background-color: var(--MainColor);
-    color: #FFF;
-    transform: translateY(-4px);
-  }
-  section.products .products-container .prod-box .content .prod-box-bottom .add.btn i,
-  section.daily .daily-container .box .content .add.btn i {
-    margin-right: 4px;
   }
 /* ----- Making The Products Section Responsive ----- */
   @media (max-width: 1024px) {
@@ -1748,7 +1763,7 @@
   section.daily .daily-container .boxes {
     width: 75%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 12px;
     position: relative;
   }
@@ -1797,16 +1812,16 @@
     top: 40%;
     transform: translateY(-50%);
     font-size: 18px;
+    color: var(--MainHeadingColor);
+    background: #F2F3F4;
     width: 40px;
     height: 40px;
-    background-color: #F2F3F4;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 22;
+    border-radius: 50%;
     cursor: pointer;
-    z-index: 3;
-    color: var(--MainHeadingColor);
     transition: var(--MainTransition);
   }
   section.daily .daily-container .arrow:hover {
@@ -1820,9 +1835,258 @@
     right: 10px;
   }
 /* ----- Making The Daily Section Responsive ----- */
+  @media (max-width: 1370px) {
+    section.daily .daily-container .box.none-4 {
+      display: none;
+    }
+  }
+  @media (max-width: 1299px) {
+    section.daily .daily-banner .banner-title {
+      font-size: 32px;
+      max-width: 100%;
+    }
+  }
   @media (max-width: 1024px) {
     section.daily .daily-banner {
       display: none;
+    }
+    section.daily .daily-container .boxes {
+      width: 100%;
+    }
+    section.daily .daily-container .box .content .prod-title.max-w-3 {
+      max-width: 95%;
+    }
+  }
+  @media (max-width: 780px) {
+    section.daily .daily-container .box.none-3 {
+      display: none;
+    }
+    section.daily .daily-container .box .content .prod-title.max-w-1 {
+      max-width: 95%;
+    }
+  }
+  @media (max-width: 575px) {
+    section.daily .daily-container .box.none-2 {
+      display: none;
+    }
+    section.daily .daily-container .box {
+      max-width: 325px;
+      margin: 0 auto;
+    }
+  }
+/* Styling The Deals Section */
+  section.deals .main-section-heading .main-section-filter .filter.btn {
+    font-family: var(--LatoFontsFamily);
+    color: var(--MainTextColor);
+    padding-right: 20px;
+    position: relative;
+  }
+  section.deals .main-section-heading .main-section-filter .filter.btn:hover {
+    transform: none;
+    color: var(--MainColor);
+  }
+  section.deals .main-section-heading .main-section-filter .filter.btn i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+    font-size: 14px;
+    transition: var(--MainTransition);
+  }
+  section.deals .main-section-heading .main-section-filter .filter.btn:hover i {
+    color: var(--MainColor);
+    right: 2px;
+  }
+  section.deals .deals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  section.deals .deals-container .box {
+    position: relative;
+    width: 100%;
+    min-height: 405px;
+  }
+  section.deals .deals-container .box img {
+    border-radius: 14px;
+    display: block;
+    max-height: 330px;
+    width: 100%;
+    object-fit: cover;
+  }
+  section.deals .deals-container .box .deal-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
+    width: 90%;
+    transition: var(--MainTransition);
+  }
+  section.deals .deals-container .box:hover .deal-content {
+    transform: translate(-50%, -20px);
+  }
+  section.deals .deals-container .box .counter-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  section.deals .deals-container .box .counter-time li {
+    background-color: #FFF;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  section.deals .deals-container .box .counter-time li .date {
+    display: block;
+  }
+  section.deals .deals-container .box .counter-time li .date.num {
+    font-size: 20px;
+    color: var(--MainColor);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  section.deals .deals-container .box .counter-time li .date.time {
+    font-family: var(--LatoFontsFamily);
+    color: var(--MainTextColor);
+    font-size: 16px;
+  }
+  section.deals .deals-container .box .deal-info {
+    background-color: #FFF;
+    padding: 20px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+  }
+  section.deals .deals-container .box .deal-info .deal-title {
+    margin: 0;
+  }
+  section.deals .deals-container .box .deal-info .rate {
+    margin: 10px 0;
+  }
+/* ----- Making The Deals Section Responsive ----- */
+  @media (max-width: 991px) {
+    section.deals .deals-container .box {
+      min-height: 410px;
+    }
+  }
+  @media (max-width: 649px) {
+    section.deals .deals-container .box {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+/* Styling The Top / Trending Section */
+  section.trending {
+    padding-top: var(--MainPaddingTop);
+    padding-bottom: var(--MainPaddingBottom);
+  }
+  section.trending .trending-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 24px 0;
+  }
+  section.trending .trending-container .col {
+    padding: 0 12px;
+  }
+  section.trending .trending-container .col-title {
+    color: var(--MainHeadingColor);
+    padding-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  section.trending .trending-container .col-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #BCE3C9;
+    width: 100px;
+    height: 2px;
+  }
+  section.trending .trending-container .box {
+    display: flex;
+    align-items: center;
+    transition: var(--MainTransition);
+  }
+  section.trending .trending-container .col .box:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  section.trending .trending-container .box:hover {
+    transform: translateY(-4px);
+  }
+  section.trending .trending-container .box .image {
+    width: 33.333%;
+    padding-right: 12px;
+  }
+  section.trending .trending-container .box img {
+    border-radius: 10px;
+  }
+  section.trending .trending-container .box .content {
+    width: 66.666%;
+    padding-left: 12px;
+  }
+  section.trending .trending-container .box .title {
+    color: var(--MainHeadingColor);
+    font-weight: 700;
+    font-size: 16px;
+    transition: var(--MainTransition);
+  }
+  section.trending .trending-container .box .title:hover {
+    color: var(--MainColor);
+  }
+  section.trending .trending-container .box .rate {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin: 7px 0 14px;
+  }
+  section.trending .trending-container .box .rate i {
+    font-size: 12px;
+  }
+  section.trending .trending-container .box .rate i.filled {
+    color: #fdc040;
+  }
+  section.trending .trending-container .box .rate i.empty {
+    color: #d1d1d1;
+  }
+  section.trending .trending-container .box .rate .rate-num {
+    font-size: 14px;
+    color: #B6B6B6;
+    font-family: var(--LatoFontsFamily);
+    margin-left: 4px;
+  }
+  section.trending .trending-container .box .new-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--MainColor);
+  }
+  section.trending .trending-container .box .old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #adadad;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+/* ----- Making The Top / Trending Section Responsive ----- */
+  @media (max-width: 1275px) {
+    section.trending .trending-container {
+      grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    }
+  }
+  @media (max-width: 625px) {
+    section.trending .trending-container .box .image {
+      width: auto;
+    }
+    section.trending .trending-container .box img {
+      width: 95px;
+    }
+    section.trending .trending-container .box .title {
+      font-size: 14px;
     }
   }
 /* ------ Animation ------ */
