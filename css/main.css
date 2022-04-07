@@ -1973,9 +1973,17 @@
     }
   }
   @media (max-width: 649px) {
+    section.deals .deals-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
     section.deals .deals-container .box {
       max-width: 400px;
       margin: 0 auto;
+    }
+  }
+  @media (max-width: 375px) {
+    section.deals .deals-container .box .deal-info {
+      padding: 20px;
     }
   }
 /* Styling The Top / Trending Section */
@@ -2079,6 +2087,9 @@
     }
   }
   @media (max-width: 625px) {
+    section.trending .trending-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
     section.trending .trending-container .box .image {
       width: auto;
     }
@@ -2088,6 +2099,161 @@
     section.trending .trending-container .box .title {
       font-size: 14px;
     }
+  }
+/* Styling The Subscribe Section */
+  section.subscribe {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.subscribe .sub-background {
+    width: 100%;
+    background-image: url(../Images/Bg-banner-subscribe.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    padding: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  section.subscribe .sub-img {
+    max-width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    z-index: -1;
+  }
+  section.subscribe .sub-title {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 20px;
+  }
+  section.subscribe .sub-des {
+    font-size: 18px;
+    font-family: var(--LatoFontsFamily);
+    color: var(--MainTextColor);
+    margin-bottom: 40px;
+  }
+  section.subscribe .sub-des .highlight {
+    color: var(--MainColor);
+  }
+  section.subscribe form {
+    display: flex;
+    background-color: #FFF;
+    max-width: 450px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  section.subscribe .input-e {
+    border: none;
+    background:  none;
+    flex-basis: 64.5%;
+    padding: 20px 0 20px 20px;
+    font-size: 16px;
+    color: var(--MainHeadingColor);
+    caret-color: var(--MainHeadingColor);
+    font-family: var(--LatoFontsFamily);
+    border-radius: 50px 0 0 50px;
+  }
+  section.subscribe .input-e:focus {
+    outline: none;
+  }
+  section.subscribe .sub.btn {
+    background: var(--MainColor);
+    color: #FFF;
+    flex-basis: 35.5%;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  section.subscribe .sub.btn:hover {
+    background-color: #29A56C;
+    color: #DEF9EC;
+  }
+/* ----- Making The Subscribe Section Responsive ----- */
+  @media(max-width: 991px) {
+    section.subscribe .sub-img {
+      max-width: 50%;
+    }
+  }
+  @media(max-width: 767px) {
+    section.subscribe .sub-img {
+      display: none;
+    }
+    section.subscribe .sub-title {
+      font-size: 32px;
+    }
+  }
+  @media(max-width: 575px) {
+    section.subscribe .sub-background {
+      padding: 60px 40px;
+    }
+    section.subscribe .sub-title {
+      font-size: 22px;
+    }
+    section.subscribe .sub-des {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+  }
+  @media(max-width: 475px) {
+    section.subscribe .sub-background {
+      padding: 60px 20px;
+    }
+    section.subscribe form {
+      flex-direction: column;
+      background-color: unset;
+      max-width: unset;
+      border-radius: unset;
+      overflow: unset;
+    }
+    section.subscribe .input-e {
+      background: #FFF;
+      border-radius: 10px;
+      max-width: 325px;
+    }
+    section.subscribe .sub.btn {
+      padding: 14px 18px;
+      width: 150px;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
+  }
+/* Styling The Features Section */
+  section.features {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.features .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  section.features .boxes .box {
+    text-align: center;
+    background-color: #F2FCFE;
+    padding: 20px 14px;
+    border-radius: 8px;
+  }
+  section.features .box .image {
+    max-width: 60px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  section.features .box:hover .image {
+    animation: rotate-vertical 0.6s linear;
+  }
+  section.features .box .feature-title {
+    text-transform: none;
+    color: var(--MainHeadingColor);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  section.features .box .feature-des {
+    font-family: var(--LatoFontsFamily);
+    font-size: 16px;
+    color: var(--MainTextColor);
   }
 /* ------ Animation ------ */
 /* -------- Change Text Animation -------- */
@@ -2121,5 +2287,14 @@
     }
     50% {
       background-image: url(../Images/slider-2.png);
+    }
+  }
+  /* Rotate Vertical Animation */
+  @keyframes rotate-vertical {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
     }
   }
