@@ -1,15 +1,38 @@
-/* Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 /* Variables */
   :root{
-  --BodyFontsFamily: 'Quicksand', sans-serif;
-  --LatoFontsFamily: 'Lato', sans-serif;
-  --MainColor: #3BB77E;
-  --MainAltColor: #FDC040;
-  --MainTextColor: #555;
-  --MainHeadingColor: #253D4E;
-  --MainTransition: 0.4s;
-  --MainPaddingTop: 25px;
-  --MainPaddingBottom: 25px;
+    --BodyFontsFamily: 'Quicksand', sans-serif;
+    --LatoFontsFamily: 'Lato', sans-serif;
+    --MainColor: #3BB77E;
+    --MainAltColor: #FDC040;
+    --MainTextColor: #555;
+    --MainHeadingColor: #253D4E;
+    --MainTransition: 0.4s;
+    --MainPaddingTop: 25px;
+    --MainPaddingBottom: 25px;
+  }
+/* Styling The Shop Products Section */
+  section.shop-products {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.shop-products .shop-products-container {
+    display: flex;
+    gap: 15px;
+  }
+  section.shop-products .shop-products-content {
+    flex: 0 0 80%;
+  }
+  section.shop-products .products-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.shop-products .products-filter-title {
+    font-size: 16px;
+    color: var(--MainTextColor);
+    font-weight: 500;
+  }
+  section.shop-products .products-filter-title .highlight {
+    color: var(--MainColor);
+    font-family: var(--LatoFontsFamily);
+    font-weight: 600;
   }

@@ -884,7 +884,7 @@
   header .mobile.header .links > li:hover > a > i {
     color: var(--MainHeadingColor);
   }
-  /* --|-- DropDown List For Mega Menu / Pages */
+/* --|-- DropDown List For Mega Menu / Pages */
   header .mobile.header .links li .mage-menu,
   header .mobile.header .links li .mage-menu .sub-menu .list-menu,
   header .mobile.header .links li .page-list {
@@ -1819,7 +1819,7 @@
     }
     section.subscribe .input-e {
       background: #FFF;
-      border-radius: 10px;
+      border-radius: 30px;
       max-width: 325px;
     }
     section.subscribe .sub.btn {
@@ -1828,6 +1828,11 @@
       border-radius: 30px;
       margin-top: 10px;
     }
+  }
+  @media (max-width: 375px) {
+    section.subscribe .sub-title {
+      font-size: 18px;
+  }
   }
 /* Styling The Features Section */
   section.features {

@@ -314,3 +314,102 @@
   .add.btn i {
     margin-right: 4px;
   }
+/* ------- Components Page Path Section ------- */
+  section.page-path {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  .main-page-path-bg {
+    background: url(../Images/path-page-bg.png) no-repeat center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 70px 80px;
+  }
+  .main-page-path-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-page-path-title {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 15px;
+    color: var(--MainHeadingColor);
+  }
+  .main-page-path {
+    font-family: var(--LatoFontsFamily);
+    font-size: 14px;
+    color: var(--MainTextColor);
+    font-weight: 600;
+  }
+  .main-page-path a.home-path {
+    color: var(--MainColor);
+    transition: var(--MainTransition);
+  }
+  .main-page-path a.home-path:hover {
+    color: var(--MainAltColor);
+  }
+  .main-page-path a.home-path i {
+    margin-right: 4px;
+    vertical-align: top;
+  }
+  .main-page-path .right-arrow {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+  .main-filter-cate-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+  .main-filter-cate-container button.filter-cate {
+    color: var(--MainColor);
+    background-color: #FFF;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .main-filter-cate-container button.filter-cate.active {
+    color: var(--MainHeadingColor) !important;
+  }
+  .main-filter-cate-container button.filter-cate:hover {
+    transform: translateY(-4px);
+    color: var(--MainAltColor);
+  }
+  .main-filter-cate-container button.filter-cate i {
+    color: #B6B6B6;
+    font-size: 15px;
+    margin-right: 6px;
+    vertical-align: baseline;
+  }
+/* ----- Making The Page Path Section Responsive ----- */
+  @media (min-width: 992px) and (max-width: 1150px){
+    .main-page-path-content {
+      width: 30%;
+    }
+    .main-filter-cate-container {
+      width: 70%;
+    }
+  }
+  @media (max-width: 991px) {
+    .main-page-path-bg {
+      padding: 40px 20px;
+    }
+    .main-page-path-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .main-page-path-title {
+      text-align: center;
+    }
+    .main-filter-cate-container {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 350px) {
+    .main-filter-cate-container {
+      display: none;
+    }
+  }
