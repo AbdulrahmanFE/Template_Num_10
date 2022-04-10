@@ -1,0 +1,316 @@
+/* ------- Components Section Heading ------- */
+  .main-section-heading,
+  .main-section-heading .main-section-filter {
+    display: flex;
+    align-items: baseline;
+  }
+  .main-section-heading {
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .main-section-heading h2.main-section-title {
+    font-size: 32px;
+    margin: 0;
+    color: var(--MainHeadingColor);
+  }
+  .main-section-heading .main-section-filter {
+    gap:  14px 10px;
+    flex-wrap: wrap;
+  }
+  .main-section-heading .main-section-filter .filter.btn  {
+    display: block;
+    color: var(--MainHeadingColor);
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--MainTransition);
+  }
+  .main-section-heading .main-section-filter .filter.btn:hover {
+    color: var(--MainColor);
+    transform: translateY(-4px);
+  }
+  .main-section-heading .main-section-filter .filter.btn.active {
+    color: var(--MainColor);
+  }
+/* ----- Making The Section Heading Responsive ----- */
+  @media (min-width:992px) {
+    .main-section-heading .main-section-filter li:first-of-type .filter.btn {
+      padding-left: 0 !important;
+    }
+  }
+  @media (max-width: 991px) {
+    .main-section-heading {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .main-section-heading h2.main-section-title {
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 575px) {
+    .main-section-heading h2.main-section-title {
+      font-size: 26px;
+    }
+  }
+/* ------- Components Shop Button ------- */
+  .shop.btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 10px;
+    background: linear-gradient(to left, var(--MainColor) 50%, var(--MainAltColor) 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    display: inline-block;
+    color: #FFF;
+    border-radius: 4px;
+  }
+  .shop.btn:hover {
+    background-position: left bottom;
+  }
+  .shop.btn i {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: var(--MainTransition);
+  }
+  .shop.btn:hover i{
+    margin-left: 8px;
+  }
+/* ------- Components Product Discount Bar ------- */
+  span.discount-bar {
+    background-color: var(--clr);
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px 0 20px 0;
+    font-family: var(--LatoFontsFamily);
+    font-size: 12px;
+    z-index: 11;
+  }
+/* ------- Components Product Box ------- */
+  .main-prod-box {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--MainTransition);
+  }
+  .main-prod-box:hover {
+    border-color: #BCE3C9;
+  }
+  .main-prod-box .content {
+    padding: 0 20px 20px;
+  }
+/* ----- Making The Product Box Responsive ----- */
+  @media (max-width: 575px) {
+    .main-prod-box {
+      max-width: 325px;
+      margin: 0 auto;
+    }
+  }
+/* ------- Components Product Front / Back Img ------- */
+  .main-prod-images-content {
+    position: relative;
+    padding: 25px 25px 0;
+    width: auto;
+    height: 228.39px;
+  }
+  .main-prod-images-content img {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  .main-prod-images-content .back-img {
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--MainTransition);
+  }
+  .main-prod-box:hover .main-prod-images-content .back-img {
+    visibility: visible;
+    opacity: 1;
+  }
+/* ------- Components Product Wishlist ------- */
+  .main-prod-wishlist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    border-radius: 4px;
+    border: 1px solid #BCE3C9;
+    z-index: 8;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--MainTransition);
+  }
+  .main-prod-box:hover .main-prod-wishlist {
+    visibility: visible;
+    opacity: 1;
+  }
+  .main-prod-wishlist a {
+    color: var(--MainColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-right: 1px solid #BCE3C9;
+    font-size: 16px;
+    position: relative;
+    transition: var(--MainTransition);
+  }
+  .main-prod-wishlist a:last-child {
+    border-right: none;
+  }
+  .main-prod-wishlist a:hover {
+    color: var(--MainAltColor);
+  }
+  .main-prod-wishlist a::before,
+  .main-prod-wishlist a::after{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--MainTransition) ease;
+  }
+  .main-prod-wishlist a:hover::before,
+  .main-prod-wishlist a:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .main-prod-wishlist a::before {
+    content: attr(aria-label);
+    background-color: var(--MainColor);
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 8px 10px;
+    border-radius: 4px;
+  }
+  .main-prod-wishlist a:hover::before {
+    transform: translate(-50%, -14px);
+  }
+  .main-prod-wishlist a::after {
+    content: "";
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--MainColor) transparent transparent;
+    transform: translate(-50%, 14px);
+  }
+  .main-prod-wishlist a:hover:after {
+    transform: translate(-50%, 0);
+  }
+/* ------- Components Product Type ------- */
+  .main-prod-type {
+    font-size: 12px;
+    color: #999;
+    font-family: var(--LatoFontsFamily);
+    transition: var(--MainTransition);
+  }
+  .main-prod-type:hover {
+    color: var(--MainColor);
+  }
+/* ------- Components Product title ------- */
+  .main-prod-title {
+    color: var(--MainHeadingColor);
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 6px 0 8px;
+    transition: var(--MainTransition);
+  }
+  .main-prod-title:hover {
+    color: var(--MainColor);
+  }
+/* ------- Components Product Rate ------- */
+  .main-prod-rate {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+  .main-prod-rate i {
+    font-size: 12px;
+  }
+  .main-prod-rate i.filled {
+    color: #fdc040;
+  }
+  .main-prod-rate i.empty {
+    color: #d1d1d1;
+  }
+  .main-prod-rate .rate-num {
+    font-size: 14px;
+    color: #B6B6B6;
+    font-family: var(--LatoFontsFamily);
+    margin-left: 4px;
+  }
+/* ------- Components Product By ------- */
+  .main-prod-by {
+    font-size: 14px;
+    color: #B6B6B6;
+    font-family: var(--LatoFontsFamily);
+    margin-top: 6px;
+  }
+  .main-prod-by .highlight {
+    color: var(--MainColor);
+    transition: var(--MainTransition);
+  }
+  .main-prod-by .highlight:hover {
+    color: var(--MainAltColor);
+  }
+/* ------- Components Product Purchase Content ------- */
+  .main-prod-purchase-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 16px;
+  }
+/* ------- Components Product New / Old Price ------- */
+  .main-prod-new-price,
+  .main-prod-old-price {
+    font-weight: 700;
+  }
+  .main-prod-new-price {
+    font-size: 18px;
+    color: var(--MainColor);
+  }
+  .main-prod-old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #adadad;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+/* ------- Components Add Button ------- */
+  .add.btn {
+    color: var(--MainColor);
+    background-color: #DEF9EC;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+  }
+  .add.btn:hover {
+    background-color: var(--MainColor);
+    color: #FFF;
+    transform: translateY(-4px);
+  }
+  .add.btn i {
+    margin-right: 4px;
+  }

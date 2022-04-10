@@ -2,17 +2,17 @@
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 /* Variables */
-:root{
-  --BodyFontsFamily: 'Quicksand', sans-serif;
-  --LatoFontsFamily: 'Lato', sans-serif;
-  --MainColor: #3BB77E;
-  --MainAltColor: #FDC040;
-  --MainTextColor: #555;
-  --MainHeadingColor: #253D4E;
-  --MainTransition: 0.4s;
-  --MainPaddingTop: 25px;
-  --MainPaddingBottom: 25px;
-}
+  :root{
+    --BodyFontsFamily: 'Quicksand', sans-serif;
+    --LatoFontsFamily: 'Lato', sans-serif;
+    --MainColor: #3BB77E;
+    --MainAltColor: #FDC040;
+    --MainTextColor: #555;
+    --MainHeadingColor: #253D4E;
+    --MainTransition: 0.4s;
+    --MainPaddingTop: 25px;
+    --MainPaddingBottom: 25px;
+  }
 /* Global Rules */
   *{
     -webkit-box-sizing: border-box;
@@ -884,7 +884,7 @@
   header .mobile.header .links > li:hover > a > i {
     color: var(--MainHeadingColor);
   }
-/* --|-- DropDown List For Mega Menu / Pages */
+  /* --|-- DropDown List For Mega Menu / Pages */
   header .mobile.header .links li .mage-menu,
   header .mobile.header .links li .mage-menu .sub-menu .list-menu,
   header .mobile.header .links li .page-list {
@@ -1222,62 +1222,6 @@
       max-width: 265px;
     }
   }
-/* ------- Components Section Heading ------- */
-  .main-section-heading,
-  .main-section-heading .main-section-filter {
-    display: flex;
-    align-items: baseline;
-  }
-  .main-section-heading {
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
-  .main-section-heading h2.main-section-title {
-    font-size: 32px;
-    margin: 0;
-    color: var(--MainHeadingColor);
-  }
-  .main-section-heading .main-section-filter {
-    gap:  14px 10px;
-    flex-wrap: wrap;
-  }
-  .main-section-heading .main-section-filter .filter.btn  {
-    display: block;
-    color: var(--MainHeadingColor);
-    padding: 0 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: var(--MainTransition);
-  }
-  .main-section-heading .main-section-filter .filter.btn:hover {
-    color: var(--MainColor);
-    transform: translateY(-4px);
-  }
-  .main-section-heading .main-section-filter .filter.btn.active {
-    color: var(--MainColor);
-  }
-/* ----- Making The Section Heading Responsive ----- */
-  @media (min-width:992px) {
-    .main-section-heading .main-section-filter li:first-of-type .filter.btn {
-      padding-left: 0 !important;
-    }
-  }
-  @media (max-width: 991px) {
-    .main-section-heading {
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .main-section-heading h2.main-section-title {
-      padding-left: 10px;
-    }
-  }
-  @media (max-width: 575px) {
-    .main-section-heading h2.main-section-title {
-      font-size: 26px;
-    }
-  }
 /* Styling The Featured Section */
   section.featured {
     padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
@@ -1379,29 +1323,6 @@
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
   }
-/* ------- Components Shop Button ------- */
-  .shop.btn {
-    font-size: 12px;
-    font-weight: 700;
-    padding: 8px 10px;
-    background: linear-gradient(to left, var(--MainColor) 50%, var(--MainAltColor) 50%);
-    background-position: right bottom;
-    background-size: 200% 100%;
-    display: inline-block;
-    color: #FFF;
-    border-radius: 4px;
-  }
-  .shop.btn:hover {
-    background-position: left bottom;
-  }
-  .shop.btn i {
-    font-size: 10px;
-    margin-left: 4px;
-    transition: var(--MainTransition);
-  }
-  .shop.btn:hover i{
-    margin-left: 8px;
-  }
 /* Styling The Banners Section */
   section.banners {
     padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
@@ -1444,282 +1365,14 @@
       padding: 40px 20px;
     }
   }
-/* ------- Components Discount Bar ------- */
-  span.bar {
-    background-color: var(--clr);
-    color: #FFF;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px 0 20px 0;
-    font-family: var(--LatoFontsFamily);
-    font-size: 12px;
-    z-index: 11;
-  }
-/* ------- Components Add Button ------- */
-  .add.btn {
-    color: var(--MainColor);
-    background-color: #DEF9EC;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 4px;
-  }
-  .add.btn:hover {
-    background-color: var(--MainColor);
-    color: #FFF;
-    transform: translateY(-4px);
-  }
-  .add.btn i {
-    margin-right: 4px;
-  }
-/*
-------- Styling The Products Section -------
-------- Styling The Daily Section (Just The Common Styles) -------
-------- Styling The Deals Section (Just The Common Styles) -------
-*/
-  section.products,
-  section.daily,
-  section.deals {
-    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
-  }
+/* ------- Styling The Products Section ------- */
+    section.products {
+      padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+    }
   section.products .products-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18.8%, 1fr));
     gap: 20px;
-  }
-  section.products .products-container .prod-box,
-  section.daily .daily-container .box {
-    width: 100%;
-    background-color: #FFF;
-    border: 1px solid #ececec;
-    border-radius: 14px;
-    overflow: hidden;
-    position: relative;
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box:hover,
-  section.daily .daily-container .box:hover {
-    border-color: #BCE3C9;
-  }
-  section.products .products-container .prod-box .images-content,
-  section.daily .daily-container .box .images-content {
-    position: relative;
-    padding: 25px 25px 0;
-    width: auto;
-    height: 228.39px;
-  }
-  section.products .products-container .prod-box .images-content img,
-  section.daily .daily-container .box .images-content img {
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-  }
-  section.products .products-container .prod-box .images-content .back-img,
-  section.daily .daily-container .box .images-content .back-img {
-    z-index: 2;
-    visibility: hidden;
-    opacity: 0;
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box:hover .images-content .back-img,
-  section.daily .daily-container .box:hover .images-content .back-img {
-    visibility: visible;
-    opacity: 1;
-  }
-  section.products .products-container .prod-box .wishlist,
-  section.daily .daily-container .box .wishlist {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #FFF;
-    border-radius: 4px;
-    border: 1px solid #BCE3C9;
-    z-index: 8;
-    display: flex;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box:hover .wishlist,
-  section.daily .daily-container .box:hover .wishlist {
-    opacity: 1;
-    visibility: visible;
-  }
-  section.products .products-container .prod-box .wishlist a,
-  section.daily .daily-container .box .wishlist a {
-    color: var(--MainColor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-right: 1px solid #BCE3C9;
-    font-size: 16px;
-    position: relative;
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box .wishlist a:hover,
-  section.daily .daily-container .box .wishlist a:hover {
-    color: var(--MainAltColor);
-  }
-  section.products .products-container .prod-box .wishlist a:last-child,
-  section.daily .daily-container .box .wishlist a:last-child {
-    border-right: none;
-  }
-  section.products .products-container .prod-box .wishlist a::before,
-  section.products .products-container .prod-box .wishlist a::after,
-  section.daily .daily-container .box .wishlist a::before,
-  section.daily .daily-container .box .wishlist a::after {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--MainTransition) ease;
-  }
-  section.products .products-container .prod-box .wishlist a:hover::before,
-  section.products .products-container .prod-box .wishlist a:hover::after,
-  section.daily .daily-container .box .wishlist a:hover::before,
-  section.daily .daily-container .box .wishlist a:hover::after {
-    opacity: 1;
-    visibility: visible;
-  }
-  section.products .products-container .prod-box .wishlist a::before,
-  section.daily .daily-container .box .wishlist a::before {
-    content: attr(aria-label);
-    background-color: var(--MainColor);
-    color: white;
-    font-size: 12px;
-    white-space: nowrap;
-    padding: 8px 10px;
-    border-radius: 4px;
-  }
-  section.products .products-container .prod-box .wishlist a:hover::before,
-  section.daily .daily-container .box .wishlist a:hover::before {
-    transform: translate(-50%, -14px);
-  }
-  section.products .products-container .prod-box .wishlist a::after,
-  section.daily .daily-container .box .wishlist a::after {
-    content: "";
-    border-width: 8px;
-    border-style: solid;
-    border-color: var(--MainColor) transparent transparent;
-    transform: translate(-50%, 14px);
-  }
-  section.products .products-container .prod-box .wishlist a:hover:after,
-  section.daily .daily-container .box .wishlist a:hover::after {
-    transform: translate(-50%, 0);
-  }
-  section.products .products-container .prod-box .content,
-  section.daily .daily-container .box .content {
-    padding: 0 20px 20px;
-  }
-  section.products .products-container .prod-box .content .type,
-  section.daily .daily-container .box .content .type {
-    font-size: 12px;
-    color: #999;
-    font-family: var(--LatoFontsFamily);
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box .content .type:hover,
-  section.daily .daily-container .box .content .type:hover {
-    color: var(--MainColor);
-  }
-  section.products .products-container .prod-box .content .prod-title,
-  section.daily .daily-container .box .content .prod-title,
-  section.deals .deals-container .box .deal-info .deal-title {
-    color: var(--MainHeadingColor);
-    display: block;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 6px 0 8px;
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box .content .prod-title:hover,
-  section.daily .daily-container .box .content .prod-title:hover,
-  section.deals .deals-container .box .deal-info .deal-title:hover {
-    color: var(--MainColor);
-  }
-  section.products .products-container .prod-box .content .rate,
-  section.daily .daily-container .box .content .rate,
-  section.deals .deals-container .box .deal-info .rate {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-  }
-  section.products .products-container .prod-box .content .rate i,
-  section.daily .daily-container .box .content .rate i,
-  section.deals .deals-container .box .deal-info .rate i {
-    font-size: 12px;
-  }
-  section.products .products-container .prod-box .content .rate i.filled,
-  section.daily .daily-container .box .content .rate i.filled,
-  section.deals .deals-container .box .deal-info .rate i.filled {
-    color: #fdc040;
-  }
-  section.products .products-container .prod-box .content .rate i.empty,
-  section.daily .daily-container .box .content .rate i.empty,
-  section.deals .deals-container .box .deal-info .rate i.empty {
-    color: #d1d1d1;
-  }
-  section.products .products-container .prod-box .content .rate .rate-num,
-  section.deals .deals-container .box .deal-info .rate .rate-num {
-    margin-left: 4px;
-  }
-  section.products .products-container .prod-box .content .rate .rate-num,
-  section.products .products-container .prod-box .content .by,
-  section.deals .deals-container .box .deal-info .rate .rate-num,
-  section.deals .deals-container .box .deal-info .by {
-    font-size: 14px;
-    color: #B6B6B6;
-    font-family: var(--LatoFontsFamily);
-  }
-  section.products .products-container .prod-box .content .by,
-  section.deals .deals-container .box .deal-info .by{
-    margin-top: 6px;
-  }
-  section.products .products-container .prod-box .content .highlight,
-  section.daily .daily-container .box .content .highlight,
-  section.deals .deals-container .box .deal-info .highlight {
-    color: var(--MainColor);
-    transition: var(--MainTransition);
-  }
-  section.products .products-container .prod-box .content .by .highlight:hover,
-  section.deals .deals-container .box .deal-info .by .highlight:hover {
-    color: var(--MainAltColor);
-  }
-  section.products .products-container .prod-box .content .prod-box-bottom,
-  section.deals .deals-container .box .deal-info .purchase-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-top: 16px;
-  }
-  section.products .products-container .prod-box .content .prod-box-bottom .new-price,
-  section.daily .daily-container .box .content .new-price,
-  section.deals .deals-container .box .deal-info .new-price {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  section.products .products-container .prod-box .content .prod-box-bottom .old-price,
-  section.daily .daily-container .box .content .old-price,
-  section.deals .deals-container .box .deal-info .old-price {
-    text-decoration: line-through;
-    font-size: 14px;
-    color: #adadad;
-    font-weight: 700;
-    margin-left: 6px;
   }
 /* ----- Making The Products Section Responsive ----- */
   @media (max-width: 1024px) {
@@ -1727,13 +1380,10 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
   }
-  @media (max-width: 575px) {
-    section.products .products-container .prod-box {
-      max-width: 325px;
-      margin: 0 auto;
-    }
-  }
 /* Styling The Daily Section */
+    section.daily {
+      padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+    }
   section.daily .daily-container {
     display: flex;
     flex-wrap: wrap;
@@ -1767,17 +1417,13 @@
     gap: 12px;
     position: relative;
   }
-  section.daily .daily-container .box .bar {
-    width: auto;
-    padding: 10px 20px;
-  }
-  section.daily .daily-container .box .content .price {
+  section.daily .daily-container .main-prod-box .content .price {
     margin-top: 15px;
   }
-  section.daily .daily-container .box .content .sold-content {
+  section.daily .daily-container .main-prod-box .content .sold-content {
     margin: 15px 0;
   }
-  section.daily .daily-container .box .content .sold-content .prog-holder {
+  section.daily .daily-container .main-prod-box .content .sold-content .prog-holder {
     background-color: #e9ecef;
     width: 100%;
     height: 6px;
@@ -1786,25 +1432,25 @@
     margin-bottom: 5px;
     overflow: hidden;
   }
-  section.daily .daily-container .box .content .sold-content .prog-holder .prog {
+  section.daily .daily-container .main-prod-box .content .sold-content .prog-holder .prog {
     position: absolute;
     left: 0;
     top: 0;
     background-color: var(--MainColor);
     height: 100%;
   }
-  section.daily .daily-container .box .content .sold-content .sold {
+  section.daily .daily-container .main-prod-box .content .sold-content .sold {
     font-family: var(--LatoFontsFamily);
     font-size: 14px;
     color: var(--MainHeadingColor);
   }
-  section.daily .daily-container .box .content .add.btn {
+  section.daily .daily-container .main-prod-box .content .add.btn {
     background-color: var(--MainColor);
     color: white;
     width: 100%;
     padding: 12px 30px;
   }
-  section.daily .daily-container .box .content .add.btn:hover {
+  section.daily .daily-container .main-prod-box .content .add.btn:hover {
     background-color: var(--MainAltColor);
   }
   section.daily .daily-container .arrow {
@@ -1836,7 +1482,7 @@
   }
 /* ----- Making The Daily Section Responsive ----- */
   @media (max-width: 1370px) {
-    section.daily .daily-container .box.none-4 {
+    section.daily .daily-container .main-prod-box.none-4 {
       display: none;
     }
   }
@@ -1853,28 +1499,27 @@
     section.daily .daily-container .boxes {
       width: 100%;
     }
-    section.daily .daily-container .box .content .prod-title.max-w-3 {
+    section.daily .daily-container .main-prod-box .content .main-prod-title.max-w-3 {
       max-width: 95%;
     }
   }
   @media (max-width: 780px) {
-    section.daily .daily-container .box.none-3 {
+    section.daily .daily-container .main-prod-box.none-3 {
       display: none;
     }
-    section.daily .daily-container .box .content .prod-title.max-w-1 {
+    section.daily .daily-container .main-prod-box .content .main-prod-title.max-w-1 {
       max-width: 95%;
     }
   }
   @media (max-width: 575px) {
-    section.daily .daily-container .box.none-2 {
+    section.daily .daily-container .main-prod-box.none-2 {
       display: none;
-    }
-    section.daily .daily-container .box {
-      max-width: 325px;
-      margin: 0 auto;
     }
   }
 /* Styling The Deals Section */
+    section.deals {
+      padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+    }
   section.deals .main-section-heading .main-section-filter .filter.btn {
     font-family: var(--LatoFontsFamily);
     color: var(--MainTextColor);
@@ -1905,7 +1550,7 @@
   section.deals .deals-container .box {
     position: relative;
     width: 100%;
-    min-height: 405px;
+    min-height: 410px;
   }
   section.deals .deals-container .box img {
     border-radius: 14px;
@@ -1960,10 +1605,10 @@
     -moz-box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
     box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
   }
-  section.deals .deals-container .box .deal-info .deal-title {
+  section.deals .deals-container .box .deal-info .main-prod-title {
     margin: 0;
   }
-  section.deals .deals-container .box .deal-info .rate {
+  section.deals .deals-container .box .deal-info .main-prod-rate {
     margin: 10px 0;
   }
 /* ----- Making The Deals Section Responsive ----- */
@@ -2038,47 +1683,11 @@
     width: 66.666%;
     padding-left: 12px;
   }
-  section.trending .trending-container .box .title {
-    color: var(--MainHeadingColor);
-    font-weight: 700;
-    font-size: 16px;
-    transition: var(--MainTransition);
+  section.trending .trending-container .box .main-prod-title {
+    margin: 0;
   }
-  section.trending .trending-container .box .title:hover {
-    color: var(--MainColor);
-  }
-  section.trending .trending-container .box .rate {
-    display: flex;
-    align-items: center;
-    gap: 1px;
+  section.trending .trending-container .box .main-prod-rate {
     margin: 7px 0 14px;
-  }
-  section.trending .trending-container .box .rate i {
-    font-size: 12px;
-  }
-  section.trending .trending-container .box .rate i.filled {
-    color: #fdc040;
-  }
-  section.trending .trending-container .box .rate i.empty {
-    color: #d1d1d1;
-  }
-  section.trending .trending-container .box .rate .rate-num {
-    font-size: 14px;
-    color: #B6B6B6;
-    font-family: var(--LatoFontsFamily);
-    margin-left: 4px;
-  }
-  section.trending .trending-container .box .new-price {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--MainColor);
-  }
-  section.trending .trending-container .box .old-price {
-    font-size: 14px;
-    text-decoration: line-through;
-    color: #adadad;
-    font-weight: 700;
-    margin-left: 6px;
   }
 /* ----- Making The Top / Trending Section Responsive ----- */
   @media (max-width: 1275px) {
@@ -2496,7 +2105,7 @@
       transform: translateY(-45px);
     }
   }
-  /* -------- Change Background Animation -------- */
+/* -------- Change Background Animation -------- */
   @keyframes change-background {
     0%, 100% {
       background-image: url(../Images/slider-1.png);
@@ -2505,7 +2114,7 @@
       background-image: url(../Images/slider-2.png);
     }
   }
-  /* Rotate Vertical Animation */
+/* Rotate Vertical Animation */
   @keyframes rotate-vertical {
     from {
       transform: rotateY(0deg);
