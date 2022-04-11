@@ -314,6 +314,24 @@
   .add.btn i {
     margin-right: 4px;
   }
+/* ------- Components Section Title With a Border ------- */
+  .main-section-title-border {
+    color: var(--MainHeadingColor);
+    padding-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .main-section-title-border::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #BCE3C9;
+    width: 100px;
+    height: 2px;
+  }
 /* ------- Components Page Path Section ------- */
   section.page-path {
     padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
@@ -501,6 +519,15 @@
     transform: translateY(-50%);
     color: inherit;
   }
+/* ----- Making The Filters Show / Sort By Responsive ----- */
+  @media (max-width: 767px) {
+    .main-filters-products-container {
+      display: block;
+    }
+    .main-filters-show-sort-area {
+      margin-top: 15px;
+    }
+  }
 /* ------- Components Pagination ------- */
   .main-pagination {
     margin-top: 20px;
@@ -530,3 +557,4 @@
   .main-pagination .arrow {
     font-size: 14px;
   }
+/* ------- Components Aside Content ------- */

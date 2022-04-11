@@ -489,7 +489,7 @@
     padding: 30px;
     border: 1px solid #BCE3C9;
     border-radius: 8px;
-    z-index: 2;
+    z-index: 222;
     -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
     -moz-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
     box-shadow: 0 0 10px rgb(0 0 0 / 6%);
@@ -618,7 +618,7 @@
     padding: 30px 25px;
     background-color: #FFF;
     border: 1px solid #ececec;
-    z-index: 99;
+    z-index: 999;
     -webkit-box-shadow: 1px 4px 10px rgb(0 0 0 / 6%);
     -moz-box-shadow: 1px 4px 10px rgb(0 0 0 / 6%);
     box-shadow: 1px 4px 10px rgb(0 0 0 / 6%);
@@ -1643,23 +1643,6 @@
   }
   section.trending .trending-container .col {
     padding: 0 12px;
-  }
-  section.trending .trending-container .col-title {
-    color: var(--MainHeadingColor);
-    padding-bottom: 20px;
-    font-size: 24px;
-    border-bottom: 1px solid #ececec;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  section.trending .trending-container .col-title::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #BCE3C9;
-    width: 100px;
-    height: 2px;
   }
   section.trending .trending-container .box {
     display: flex;
