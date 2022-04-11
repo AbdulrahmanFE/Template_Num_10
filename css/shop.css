@@ -21,18 +21,21 @@
   section.shop-products .shop-products-content {
     flex: 0 0 80%;
   }
-  section.shop-products .products-filters {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  section.shop-products .main-filters-products-container {
+    margin-bottom: 30px;
   }
-  section.shop-products .products-filter-title {
+  section.shop-products .main-filters-products-container .filter-title {
     font-size: 16px;
     color: var(--MainTextColor);
     font-weight: 500;
   }
-  section.shop-products .products-filter-title .highlight {
+  section.shop-products .main-filters-products-container .filter-title .highlight {
     color: var(--MainColor);
     font-family: var(--LatoFontsFamily);
     font-weight: 600;
+  }
+  section.shop-products .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 14px;
   }

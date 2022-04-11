@@ -356,13 +356,13 @@
     font-size: 10px;
     padding: 0 10px;
   }
-  .main-filter-cate-container {
+  .main-filters-cate-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
   }
-  .main-filter-cate-container button.filter-cate {
+  .main-filters-cate-container button.filter-cate {
     color: var(--MainColor);
     background-color: #FFF;
     padding: 10px 20px;
@@ -371,14 +371,14 @@
     font-weight: 700;
     white-space: nowrap;
   }
-  .main-filter-cate-container button.filter-cate.active {
+  .main-filters-cate-container button.filter-cate.active {
     color: var(--MainHeadingColor) !important;
   }
-  .main-filter-cate-container button.filter-cate:hover {
+  .main-filters-cate-container button.filter-cate:hover {
     transform: translateY(-4px);
     color: var(--MainAltColor);
   }
-  .main-filter-cate-container button.filter-cate i {
+  .main-filters-cate-container button.filter-cate i {
     color: #B6B6B6;
     font-size: 15px;
     margin-right: 6px;
@@ -389,7 +389,7 @@
     .main-page-path-content {
       width: 30%;
     }
-    .main-filter-cate-container {
+    .main-filters-cate-container {
       width: 70%;
     }
   }
@@ -404,12 +404,129 @@
     .main-page-path-title {
       text-align: center;
     }
-    .main-filter-cate-container {
+    .main-filters-cate-container {
       justify-content: center;
     }
   }
   @media (max-width: 350px) {
-    .main-filter-cate-container {
+    .main-filters-cate-container {
       display: none;
     }
+  }
+/* ------- Components Filters Show / Sort By ------- */
+  .main-filters-products-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-filters-show-sort-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .main-filters-show-sort-area .filter {
+    position: relative;
+  }
+  .main-filters-show-sort-area .check {
+    display: none;
+  }
+  .main-filters-show-sort-area .check + label {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: #FFF;
+    padding: 10px 15px;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .main-filters-show-sort-area .check + label i.sort {
+    margin-right: 6px;
+    font-size: 13px;
+  }
+  .main-filters-show-sort-area .check + label i.down-arrow {
+    margin-left: 8px;
+    font-size: 13px;
+    transition: var(--MainTransition);
+  }
+  .main-filters-show-sort-area .check:checked + label i.down-arrow {
+    transform: rotate(180deg);
+  }
+  .main-filters-show-sort-area .dd-list {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 100%;
+    padding: 15px 0;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    -moz-box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 6%);
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--MainTransition);
+  }
+  .main-filters-show-sort-area .check:checked ~ .dd-list {
+    visibility: visible;
+    opacity: 1;
+  }
+  .main-filters-show-sort-area .dd-list button.btn {
+    padding: 5px 30px;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--MainTextColor);
+    position: relative;
+  }
+  .main-filters-show-sort-area .dd-list button.btn:hover {
+    color: var(--MainColor);
+  }
+  .main-filters-show-sort-area .dd-list button.btn.active {
+    color: var(--MainColor);
+  }
+  .main-filters-show-sort-area .dd-list button.btn.active::before {
+    font-family: 'Font Awesome 6 Free';
+    content: '\f00c';
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: inherit;
+  }
+/* ------- Components Pagination ------- */
+  .main-pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .main-pagination button.btn {
+    background-color: #F2F3F4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--MainTextColor);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-pagination button.btn:hover,
+  .main-pagination button.btn.active {
+    background-color: var(--MainColor);
+    color: white;
+  }
+  .main-pagination .arrow {
+    font-size: 14px;
   }

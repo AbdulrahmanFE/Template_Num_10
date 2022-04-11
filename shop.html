@@ -25,7 +25,7 @@
     content="Practice Front-End"
     />
     <meta name="Nest" content="v1.0" />
-    <title>Nest</title>
+    <title>Nest | Shop</title>
   </head>
   <body>
     <!-- Header Section -->
@@ -420,7 +420,7 @@
               Snack
             </div>
           </div>
-          <div class="main-filter-cate-container">
+          <div class="main-filters-cate-container">
             <button class="filter-cate btn">
               <i class="fa-solid fa-xmark"></i>
               Cabbage
@@ -449,17 +449,949 @@
     <section class="shop-products">
       <div class="shop-products-container">
         <div class="shop-products-content">
-          <div class="products-filters">
-            <p class="products-filter-title">We found <span class="highlight">29</span> items for you!</p>
-            <div class="filters">
-              
+          <div class="main-filters-products-container">
+            <p class="filter-title">We found <span class="highlight">20</span> items for you!</p>
+            <div class="main-filters-show-sort-area">
+              <div class="filter">
+                <input type="checkbox" id="show" class="check">
+                <label for="show">
+                  <i class="fas fa-th-large sort"></i>
+                  <span>Show: 50</span>
+                  <i class="fa-solid fa-angle-down down-arrow"></i>
+                </label>
+                <ul class="dd-list">
+                  <li><button type="button" class="btn active">50</button></li>
+                  <li><button type="button" class="btn">100</button></li>
+                  <li><button type="button" class="btn">150</button></li>
+                  <li><button type="button" class="btn">200</button></li>
+                  <li><button type="button" class="btn">All</button></li>
+                </ul>
+              </div>
+              <div class="filter">
+                <input type="checkbox" id="sort" class="check">
+                <label for="sort">
+                  <i class="fas fa-sort-amount-down-alt sort"></i>
+                  <span>Sort by: Featured</span>
+                  <i class="fa-solid fa-angle-down down-arrow"></i>
+                </label>
+                <ul class="dd-list">
+                  <li><button type="button" class="btn active">Featured</button></li>
+                  <li><button type="button" class="btn">Price:Low To High</button></li>
+                  <li><button type="button" class="btn">Price:high To Low</button></li>
+                  <li><button type="button" class="btn">Release Date</button></li>
+                  <li><button type="button" class="btn">Avg Rating</button></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="products-container">
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f74b81">Hot</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-01.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-01.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Snack</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">32.55$</span>
+                    <span class="main-prod-old-price">40.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #67bcee">Sale</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-02.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-02.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Hood Foods</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">36.99$</span>
+                    <span class="main-prod-old-price">47.9$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #3BB77E">New</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-03.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-03.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Snack</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">33.25$</span>
+                    <span class="main-prod-old-price">45.5$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f59758">-14%</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-04.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-04.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Vegetables</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">43.55$</span>
+                    <span class="main-prod-old-price">68.4$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f74b81">Hot</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-05.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-05.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Pet Foods</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">10.59$</span>
+                    <span class="main-prod-old-price">17.5$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #67bcee">Sale</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-06.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-06.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Coffees</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">30.49$</span>
+                    <span class="main-prod-old-price">39.9$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f74b81">Hot</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-07.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-07.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Cream</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">12.55$</span>
+                    <span class="main-prod-old-price">20.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #67bcee">Sale</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-08.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-08.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Vegetables</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">19.55$</span>
+                    <span class="main-prod-old-price">20.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">  
+              <span class="discount-bar" style="--clr: #3BB77E">New</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-09.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-09.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Meats</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">50.55$</span>
+                    <span class="main-prod-old-price">55.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f59758">-20%</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-10.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-10.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Snack</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">22.55$</span>
+                    <span class="main-prod-old-price">30.9$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f74b81">Hot</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-01.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-01.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Snack</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">32.55$</span>
+                    <span class="main-prod-old-price">40.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #67bcee">Sale</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-02.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-02.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Hood Foods</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">36.99$</span>
+                    <span class="main-prod-old-price">47.9$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #3BB77E">New</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-03.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-03.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Snack</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">33.25$</span>
+                    <span class="main-prod-old-price">45.5$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f59758">-14%</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-04.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-04.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Vegetables</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">43.55$</span>
+                    <span class="main-prod-old-price">68.4$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f74b81">Hot</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-05.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-05.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Pet Foods</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">10.59$</span>
+                    <span class="main-prod-old-price">17.5$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #67bcee">Sale</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-06.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-06.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Coffees</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">30.49$</span>
+                    <span class="main-prod-old-price">39.9$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f74b81">Hot</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-07.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-07.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Cream</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">12.55$</span>
+                    <span class="main-prod-old-price">20.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #67bcee">Sale</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-08.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-08.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Vegetables</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">19.55$</span>
+                    <span class="main-prod-old-price">20.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">  
+              <span class="discount-bar" style="--clr: #3BB77E">New</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-09.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-09.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Meats</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">50.55$</span>
+                    <span class="main-prod-old-price">55.7$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="main-prod-box">
+              <span class="discount-bar" style="--clr: #f59758">-20%</span>
+              <div class="main-prod-images-content">
+                <img src="Images/product-10.jpg" alt="" aria-hidden="true">
+                <img src="Images/product-back-10.jpg" alt="" aria-hidden="true" class="back-img">
+                <div class="main-prod-wishlist">
+                  <a href="#" aria-label="Add To Wishlist"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></a>
+                  <a href="#" aria-label="Quick view"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="content">
+                <a href="#" class="main-prod-type">Snack</a>
+                <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                <div class="main-prod-rate">
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="filled fa-solid fa-star"></i>
+                  <i class="empty fa-solid fa-star"></i>
+                  <span class="rate-num">(4.0)</span>
+                </div>
+                <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+                <div class="main-prod-purchase-content">
+                  <div class="price">
+                    <span class="main-prod-new-price">22.55$</span>
+                    <span class="main-prod-old-price">30.9$</span>
+                  </div>
+                  <button class="add btn" aria-label="add button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="main-pagination">
+            <li><button type="button" class="btn" aria-label="Back Page"><i class="fa-solid fa-arrow-left arrow"></i></button></li>
+            <li><button type="button" class="btn">1</button></li>
+            <li><button type="button" class="btn active">2</button></li>
+            <li><button type="button" class="btn">3</button></li>
+            <li><button type="button" class="btn">...</button></li>
+            <li><button type="button" class="btn">7</button></li>
+            <li><button type="button" class="btn" aria-label="Next Page"><i class="fa-solid fa-arrow-right arrow"></i></button></li>
+          </ul>
+        </div>
+        <aside class="main-products-aside">
+        </aside>
+      </div>
+    </section>
+    <!-- Deals Section -->
+    <section class="deals">
+      <div class="main-section-heading">
+        <h2 class="main-section-title">Deals Of The Day</h2>
+        <ul class="main-section-filter">
+          <li><a href="#" class="filter btn">
+            all deals
+            <i class="fa-solid fa-angle-right"></i>
+          </a></li>
+        </ul>
+      </div>
+      <div class="deals-container">
+        <div class="box">
+          <img src="Images/banner-deals-01.png" alt="" aria-hidden="true">
+          <div class="deal-content">
+            <ul class="counter-time">
+              <li>
+                <span class="date num">1111</span>
+                <span class="date time">Days</span>
+              </li>
+              <li>
+                <span class="date num">14</span>
+                <span class="date time">Hours</span>
+              </li>
+              <li>
+                <span class="date num">09</span>
+                <span class="date time">Mins</span>
+              </li>
+              <li>
+                <span class="date num">49</span>
+                <span class="date time">Sec</span>
+              </li>
+            </ul>
+            <div class="deal-info">
+              <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+              <div class="main-prod-rate">
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="empty fa-solid fa-star"></i>
+                <span class="rate-num">(4.0)</span>
+              </div>
+              <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+              <div class="main-prod-purchase-content">
+                <div class="price">
+                  <span class="main-prod-new-price">19.55$</span>
+                  <span class="main-prod-old-price">20.7$</span>
+                </div>
+                <button class="add btn" aria-label="add button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  add
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- <aside>
-        </aside> -->
+        <div class="box">
+          <img src="Images/banner-deals-02.png" alt="" aria-hidden="true">
+          <div class="deal-content">
+            <ul class="counter-time">
+              <li>
+                <span class="date num">1222</span>
+                <span class="date time">Days</span>
+              </li>
+              <li>
+                <span class="date num">14</span>
+                <span class="date time">Hours</span>
+              </li>
+              <li>
+                <span class="date num">09</span>
+                <span class="date time">Mins</span>
+              </li>
+              <li>
+                <span class="date num">49</span>
+                <span class="date time">Sec</span>
+              </li>
+            </ul>
+            <div class="deal-info">
+              <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+              <div class="main-prod-rate">
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="empty fa-solid fa-star"></i>
+                <span class="rate-num">(4.0)</span>
+              </div>
+              <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+              <div class="main-prod-purchase-content">
+                <div class="price">
+                  <span class="main-prod-new-price">19.55$</span>
+                  <span class="main-prod-old-price">20.7$</span>
+                </div>
+                <button class="add btn" aria-label="add button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Images/banner-deals-03.png" alt="" aria-hidden="true">
+          <div class="deal-content">
+            <ul class="counter-time">
+              <li>
+                <span class="date num">1333</span>
+                <span class="date time">Days</span>
+              </li>
+              <li>
+                <span class="date num">14</span>
+                <span class="date time">Hours</span>
+              </li>
+              <li>
+                <span class="date num">09</span>
+                <span class="date time">Mins</span>
+              </li>
+              <li>
+                <span class="date num">49</span>
+                <span class="date time">Sec</span>
+              </li>
+            </ul>
+            <div class="deal-info">
+              <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+              <div class="main-prod-rate">
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="empty fa-solid fa-star"></i>
+                <span class="rate-num">(4.0)</span>
+              </div>
+              <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+              <div class="main-prod-purchase-content">
+                <div class="price">
+                  <span class="main-prod-new-price">19.55$</span>
+                  <span class="main-prod-old-price">20.7$</span>
+                </div>
+                <button class="add btn" aria-label="add button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Images/banner-deals-04.png" alt="" aria-hidden="true">
+          <div class="deal-content">
+            <ul class="counter-time">
+              <li>
+                <span class="date num">1444</span>
+                <span class="date time">Days</span>
+              </li>
+              <li>
+                <span class="date num">14</span>
+                <span class="date time">Hours</span>
+              </li>
+              <li>
+                <span class="date num">09</span>
+                <span class="date time">Mins</span>
+              </li>
+              <li>
+                <span class="date num">49</span>
+                <span class="date time">Sec</span>
+              </li>
+            </ul>
+            <div class="deal-info">
+              <a href="#" class="main-prod-title">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+              <div class="main-prod-rate">
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="filled fa-solid fa-star"></i>
+                <i class="empty fa-solid fa-star"></i>
+                <span class="rate-num">(4.0)</span>
+              </div>
+              <p class="main-prod-by">By <a href="#" class="highlight">NestFood</a></p>
+              <div class="main-prod-purchase-content">
+                <div class="price">
+                  <span class="main-prod-new-price">19.55$</span>
+                  <span class="main-prod-old-price">20.7$</span>
+                </div>
+                <button class="add btn" aria-label="add button">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Subscribe Section -->
