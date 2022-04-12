@@ -384,6 +384,7 @@
     color: var(--MainColor);
     background-color: #FFF;
     padding: 10px 20px;
+    border: 1px solid #ececec;
     border-radius: 25px;
     font-size: 18px;
     font-weight: 700;

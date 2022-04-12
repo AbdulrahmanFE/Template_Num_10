@@ -37,7 +37,7 @@
   section.shop-products .products-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 14px;
+    gap: 15px;
   }
   .main-aside-content {
     width: 19.5%;
@@ -46,6 +46,7 @@
     border: 1px solid #ececec;
     padding: 25px;
     border-radius: 12px;
+    margin-bottom: 30px;
   }
   .main-aside-content .sidebar-box .categories-list li {
     display: flex;
@@ -88,6 +89,42 @@
     color: var(--MainHeadingColor);
     font-size: 12px;
     font-weight: 500;
+  }
+  /* .main-aside-content .sidebar-box . {
+
+  } */
+  .main-aside-content .sidebar-box .prod-box {
+    display: flex;
+  }
+  .main-aside-content .sidebar-box .prod-box:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #ececec;
+    margin-bottom: 10px;
+  }
+  .main-aside-content .sidebar-box .prod-box .image {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  .main-aside-content .sidebar-box .prod-box .prod-title {
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--MainColor);
+    transition: var(--MainTransition);
+  }
+  .main-aside-content .sidebar-box .prod-box .prod-title:hover {
+    color: var(--MainAltColor);
+  }
+  .main-aside-content .sidebar-box .prod-box .prod-price {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--MainTextColor);
+    margin: 5px 0;
   }
   /* ----- Making The Shop Products Section Responsive ----- */
   @media (max-width: 1024px) {
