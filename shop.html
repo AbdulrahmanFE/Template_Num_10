@@ -1190,9 +1190,9 @@
             <li><button type="button" class="btn" aria-label="Back Page"><i class="fa-solid fa-arrow-left arrow"></i></button></li>
             <li><button type="button" class="btn">1</button></li>
             <li><button type="button" class="btn active">2</button></li>
-            <li><button type="button" class="btn">3</button></li>
+            <li class="none-2"><button type="button" class="btn">3</button></li>
             <li><button type="button" class="btn">...</button></li>
-            <li><button type="button" class="btn">7</button></li>
+            <li class="none-1"><button type="button" class="btn">7</button></li>
             <li><button type="button" class="btn" aria-label="Next Page"><i class="fa-solid fa-arrow-right arrow"></i></button></li>
           </ul>
         </div>
@@ -1236,44 +1236,83 @@
                 <span class="cate-num">87</span>
               </li>
             </ul>
+            <ul class="categories-list">
+              <li>
+                <a href="#">
+                  <img src="Images/category-06.svg" alt="" aria-hidden="true">
+                  Juice &amp; Drinks
+                </a>
+                <span class="cate-num">60</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="Images/category-07.svg" alt="" aria-hidden="true">
+                  Fresh Fruit
+                </a>
+                <span class="cate-num">45</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="Images/category-08.svg" alt="" aria-hidden="true">
+                  Fast food
+                </a>
+                <span class="cate-num">22</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="Images/category-09.svg" alt="" aria-hidden="true">
+                  Vegetables
+                </a>
+                <span class="cate-num">28</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="Images/category-10.svg" alt="" aria-hidden="true">
+                  Fresh Seafood
+                </a>
+                <span class="cate-num">37</span>
+              </li>
+            </ul>
           </div>
-          <div class="sidebar-box">
+          <div class="sidebar-box filters-bg">
             <h2 class="main-section-title-border">Fill by price</h2>
             <div class="price-filter-box">
-              <input type="range" min="0" max="100" step="1" value="1">
+              <input type="range" min="0" max="100" step="1" value="0" class="filter-range">
               <div class="range-content">
-                <p class="range-des">From: <span>$0</span></p>
-                <p class="range-des">To: <span>$2,000</span></p>
+                <p class="range-caption">From: <span class="highlight">$0</span></p>
+                <p class="range-caption">To: <span class="highlight">$2,000</span></p>
               </div>
             </div>
-            <div class="filters">
-              <h3 class="filters-title">Color</h3>
-              <div class="filter-box">
-                <input type="checkbox" id="red-color">
-                <label for="red-color">Red (56)</label>
+            <div class="filters-container">
+              <div class="filter">
+                <h3 class="filter-title">Color</h3>
+                <div class="filter-box">
+                  <input type="checkbox" id="red-color" class="checkbox">
+                  <label for="red-color">Red (56)</label>
+                </div>
+                <div class="filter-box">
+                  <input type="checkbox" id="green-color" class="checkbox">
+                  <label for="green-color">Green (78)</label>
+                </div>
+                <div class="filter-box">
+                  <input type="checkbox" id="blue-color" class="checkbox">
+                  <label for="blue-color">Blue (54)</label>
+                </div>
               </div>
-              <div class="filter-box">
-                <input type="checkbox" id="green-color">
-                <label for="green-color">Green (78)</label>
-              </div>
-              <div class="filter-box">
-                <input type="checkbox" id="blue-color">
-                <label for="blue-color">Blue (54)</label>
-              </div>
-            </div>
-            <div class="filters">
-              <h3 class="filters-title">Item Condition</h3>
-              <div class="filter-box">
-                <input type="checkbox" id="new-item">
-                <label for="new-item">New (1506)</label>
-              </div>
-              <div class="filter-box">
-                <input type="checkbox" id="refurbished-item">
-                <label for="refurbished-item">Refurbished (27)</label>
-              </div>
-              <div class="filter-box">
-                <input type="checkbox" id="used-item">
-                <label for="used-item">Used (45)</label>
+              <div class="filter">
+                <h3 class="filter-title">Item Condition</h3>
+                <div class="filter-box">
+                  <input type="checkbox" id="new-item" class="checkbox">
+                  <label for="new-item">New (1506)</label>
+                </div>
+                <div class="filter-box">
+                  <input type="checkbox" id="refurbished-item" class="checkbox">
+                  <label for="refurbished-item">Refurbished (27)</label>
+                </div>
+                <div class="filter-box">
+                  <input type="checkbox" id="used-item" class="checkbox">
+                  <label for="used-item">Used (45)</label>
+                </div>
               </div>
             </div>
             <button type="button" class="filter-btn btn"><i class="fa-solid fa-filter"></i>Filter</button>
@@ -1343,6 +1382,16 @@
                   <i class="empty fa-solid fa-star"></i>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="sidebar-banner">
+            <div class="banner-text">
+              <span class="title">Organic</span>
+              <h3 class="des">Save 17% 
+                <br />
+                on <span class="highlight">Organic</span>
+                <br />
+                Juice</h3>
             </div>
           </div>
         </aside>
