@@ -405,30 +405,30 @@
   }
 /* ----- Making The Page Path Section Responsive ----- */
   @media (min-width: 992px) and (max-width: 1150px){
-    .main-page-path-content {
+    section.page-path .main-page-path-content {
       width: 30%;
     }
-    .main-filters-cate-container {
+    section.page-path .main-filters-cate-container {
       width: 70%;
     }
   }
   @media (max-width: 991px) {
-    .main-page-path-bg {
+    section.page-path .main-page-path-bg {
       padding: 40px 20px;
     }
-    .main-page-path-container {
+    section.page-path .main-page-path-container {
       flex-direction: column;
       gap: 30px;
     }
-    .main-page-path-title {
+    section.page-path .main-page-path-title {
       text-align: center;
     }
-    .main-filters-cate-container {
+    section.page-path .main-filters-cate-container {
       justify-content: center;
     }
   }
   @media (max-width: 350px) {
-    .main-filters-cate-container {
+    section.page-path .main-filters-cate-container {
       display: none;
     }
   }
@@ -625,7 +625,7 @@
     font-weight: 500;
   }
   .main-aside-content .sidebar-box.filters-bg {
-    background: url(../Images/sidebar-fillters-bg.png) no-repeat right bottom;
+    background: url(../Images/sidebar-filters-bg.png) no-repeat right bottom;
     background-size: 150px;
   }
   .main-aside-content .sidebar-box .filter-range {
@@ -827,7 +827,7 @@
 /* ----- Making The Aside Content Responsive ----- */
   @media (max-width: 1199px) {
     .main-aside-content {
-      width: 100%;
+      width: 100% !important;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 15px;
