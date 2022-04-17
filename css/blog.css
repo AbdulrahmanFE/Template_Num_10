@@ -62,34 +62,30 @@
   section.blog .blog-box .blog-title:hover {
     color: var(--MainColor);
   }
-  section.blog .blog-box .blog-stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
   section.blog .blog-box .blog-stats li {
+    display: inline-block;
     font-size: 14px;
     font-weight: 600;
     color: var(--MainTextColor);
-    position: relative;
   }
-  section.blog .blog-box .blog-stats li.dot::before {
-    content: "";
+  section.blog .blog-box .blog-stats li.dot {
     width: 4px;
     height: 4px;
     background: #CCC;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    margin-top: -1px;
+    margin: 0 8px;
+    vertical-align: middle;
   }
   section.blog .main-aside-content {
     width: 25%;
     padding-left: 15px;
   }
 /* ----- Making The Blog Section Responsive ----- */
+  @media (min-width: 1200px) and (max-width: 1377px) {
+    section.blog .blog-box.none {
+      display: none;
+    }
+  }
   @media (max-width: 1199px) {
     section.blog .blog-container {
       flex-direction: column;
@@ -104,5 +100,32 @@
     }
     section.blog .main-aside-content .sidebar-box:nth-child(4) {
       order: 4;
+    }
+  }
+  @media (max-width: 767px) {
+    section.blog .blog-box {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    section.blog .blog-box .blog-box-content {
+      padding: 20px;
+    }
+  }
+  @media (max-width: 375px) {
+    section.page-path .main-page-path-title {
+      font-size: 2rem;
+    }
+    section.blog .blog-content .blog-filter-title {
+      font-size: 30px;
+    }
+    section.blog .blog-content .blog-filter-title > img {
+      max-width: 30px;
+      margin-right: 6px;
+    }
+    section.blog .blog-boxes {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    section.blog .blog-box .blog-title {
+      font-size: 20px;
     }
   }

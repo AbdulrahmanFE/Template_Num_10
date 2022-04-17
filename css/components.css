@@ -847,4 +847,8 @@
     .main-aside-content {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+    .main-aside-content .sidebar-box .filter-cate.btn {
+      font-size: 16px;
+      padding: 10px 16px;
+    }
   }
