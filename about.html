@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <!-- Page icon -->
+    <link rel="icon" type="image" href="Images/favicon.svg" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <meta 
+    http-equiv="X-UA-Compatible" 
+    content="IE=edge"
+    />
+    <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+    />
+    <meta 
+    name="description" 
+    content="Practice Front-End"
+    />
+    <meta name="Nest" content="v1.0" />
+    <title>Nest | About Us</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Top Header -->
+      <div class="top header">
+        <ul class="left list none">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+        <ul class="mid-list">
+          <li>100% Secure delivery without contacting the courier</li>
+          <li>Supper Value Deals - Save more with coupons</li>
+          <li>Trendy 25silver jewelry, save up 35% off today</li>
+        </ul>
+        <ul class="right list none">
+          <li><a href="tel:+ 1800 900">Need help? Call Us : <span class="highlight"> + 1800 900</span></a></li>
+          <li class="hover">
+            <a href="#" class="arrow">English <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="menu">
+              <li>
+                <a href="#" title="Français">
+                  <img src="images/flag-fr.png" />
+                  Français
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Deutsch">
+                  <img src="images/flag-de.png" />
+                  Deutsch
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Pусский">
+                  <img src="images/flag-ru.png" />
+                  Pусский
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="hover">
+            <a href="#" class="arrow">USD <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="menu">
+              <li>
+                <a href="#">
+                  <img src="images/flag-fr.png" />
+                  INR
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/flag-de.png" />
+                  MBP
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/flag-ru.png" />
+                  EU
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="sale">
+          Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left
+        </p>
+      </div>
+      <!-- Center Header -->
+      <div class="center header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <img src="Images/logo.svg" alt="logo" class="logo-img" />
+          </a>
+          <div class="search-form">
+            <p class="categories-title">All Categories <i class="fa-solid fa-angle-down"></i></p>
+            <form>
+              <input type="search" name="search" placeholder="Search for items..." class="search-field" />
+              <button class="search btn" type="submit" aria-label="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          <div class="location-list">
+            <i class="fa-solid fa-globe"></i>
+            <span class="highlight">Your Location</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <ul class="list">
+            <li><a href="#"><div class="image three"><img src="Images/icon-compare.svg" alt="icon-compare" /></div>compare</a></li>
+            <li><a href="#"><div class="image six"><img src="Images/icon-heart.svg" alt="icon-compare" /></div>wishlist</a></li>
+            <li class="relative">
+              <a href="#"><div class="image two"><img src="Images/icon-cart.svg" alt="icon-compare" /></div>cart</a>
+              <div class="cart-dd-list">
+                <ul>
+                  <li>
+                    <div class="producer-image"><img src="Images/mango-juice.jpg" alt="mango-juice" /></div>
+                    <div class="producer-content">
+                      <h3 class="producer-title">Daisy Casual Bag</h3>
+                      <h4 class="producer-price"><span>1 × </span>$800.00</h4>
+                    </div>
+                    <div class="producer-del">
+                      <button class="del btn" type="button" aria-label="Delete"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="producer-image"><img src="Images/pepper.jpg" alt="paper" /></div>
+                    <div class="producer-content">
+                      <h3 class="producer-title">Corduroy Shirts</h3>
+                      <h4 class="producer-price"><span>1 × </span>$3200.00</h4>
+                    </div>
+                    <div class="producer-del">
+                      <button class="del btn" type="button" aria-label="Delete"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="cart-total">
+                  <p>Total <span>$4000.00</span></p>
+                </div>
+                <div class="cart-buttons">
+                  <a href="#" class="view btn">view cart</a>
+                  <a href="#" class="checkout btn">Checkout</a>
+                </div>
+              </div>
+            </li>
+            <li class="relative">
+              <a href="#"><img src="Images/icon-user.svg" alt="icon-user" />account</a>
+              <div class="account-dd-list">
+                <ul>
+                  <li><a href="#"><i class="fa-regular fa-user"></i>My Account</a></li>
+                  <li><a href="#"><i class="fa-solid fa-location-dot"></i>Order Tracking</a></li>
+                  <li><a href="#"><i class="fa-solid fa-file-invoice-dollar"></i>My Voucher</a></li>
+                  <li><a href="#"><i class="fa-regular fa-heart"></i>My Wishlist</a></li>
+                  <li><a href="#"><i class="fa-solid fa-sliders"></i>Setting</a></li>
+                  <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom Header -->
+      <div class="bottom header">
+        <div class="container">
+          <div class="categories-container">
+            <input type="checkbox" id="categories-list" class="categories-check">
+            <label for="categories-list" class="categories-label">
+              <i class="fas fa-grip-horizontal"></i>
+              <p>Browse All Categories</p>
+              <i class="fa-solid fa-angle-down arrow-down"></i>
+            </label>
+            <div class="categories-dd-list">
+              <div class="categories-content">
+                <ul>
+                  <li><a href="#">
+                    <img src="Images/category-01.svg" alt="" aria-hidden="true">
+                    Milks and Dairies
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-02.svg" alt="" aria-hidden="true">
+                    Bread and Juice
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-03.svg" alt="" aria-hidden="true">
+                    Clothing & beauty
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-04.svg" alt="" aria-hidden="true">
+                    Pet Foods & Toy
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-05.svg" alt="" aria-hidden="true">
+                    Baking material
+                  </a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">
+                    <img src="Images/category-06.svg" alt="" aria-hidden="true">
+                    Juice & Drinks
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-07.svg" alt="" aria-hidden="true">
+                    Fresh Fruit
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-08.svg" alt="" aria-hidden="true">
+                    Fast food
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-09.svg" alt="" aria-hidden="true">
+                    Vegetables
+                  </a></li>
+                  <li><a href="#">
+                    <img src="Images/category-10.svg" alt="" aria-hidden="true">
+                    Fresh Seafood
+                  </a></li>
+                </ul>
+              </div>
+              <button type="button" aria-label="Show more" class="show btn">
+                <span></span>
+                Show more...
+              </button>
+            </div>
+          </div>
+          <ul class="links">
+            <li><a href="shop.html">
+              <img src="Images/icon-hot.svg" alt="icon-hot">
+              Hot Deals
+            </a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li>
+              <a href="#">Mage Menu<i class="fa-solid fa-angle-down"></i></a>
+              <!-- Mega Menu -->
+              <div class="mage-menu">
+                <div class="sub-mage-menu">
+                <a href="#" class="menu-title">Fruit & Vegetables</a>
+                <ul>
+                  <li><a href="#">Meat & Poultry</a></li>
+                  <li><a href="#">Fresh Vegetables</a></li>
+                  <li><a href="#">Herbs & Seasonings</a></li>
+                  <li><a href="#">Cuts & Sprouts</a></li>
+                  <li><a href="#">Exotic Fruits & Veggies</a></li>
+                  <li><a href="#">Packaged Produce</a></li>
+                </ul>
+                </div>
+                <div class="sub-mage-menu">
+                <a href="#" class="menu-title">Breakfast & Dairy</a>
+                <ul>
+                  <li><a href="#">Milk & Flavoured Milk</a></li>
+                  <li><a href="#">Butter and Margarine</a></li>
+                  <li><a href="#">Eggs Substitutes</a></li>
+                  <li><a href="#">Marmalades</a></li>
+                  <li><a href="#">Sour Cream</a></li>
+                  <li><a href="#">Cheese</a></li>
+                </ul>
+                </div>
+                <div class="sub-mage-menu">
+                <a href="#" class="menu-title">Meat & Seafood</a>
+                <ul>
+                  <li><a href="#">Breakfast Sausage</a></li>
+                  <li><a href="#">Dinner Sausage</a></li>
+                  <li><a href="#">Chicken</a></li>
+                  <li><a href="#">Sliced Deli Meat</a></li>
+                  <li><a href="#">Wild Caught Fillets</a></li>
+                  <li><a href="#">Crab and Shellfish</a></li>
+                </ul>
+                </div>
+                <div class="menu-banner">
+                  <a href="#">
+                    <img src="Images/banner-menu.png" alt="banner">
+                    <div class="menu-banner-content">
+                      <span>hot deals</span>
+                      <h2>Don't miss<br>Trending</h2>
+                      <h3>Save to 50%</h3>
+                      <a href="#" class="shop-btn">Shop Now</a>
+                    </div>
+                    <div class="menu-banner-discount">
+                      <span>25%</span> off
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="pages-relative">
+              <a href="#">Pages<i class="fa-solid fa-angle-down"></i></a>
+              <!-- Pages -->
+              <ul class="pages-dd-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Purchase Guide</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">404 Page</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="support">
+            <img src="Images/icon-headphone.svg" alt="icon-headphone">
+            <div class="support-content">
+              1900 - 888<span>24/7 Support Center</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header For Tablet / Mobile -->
+      <div class="mobile header">
+        <div class="container">
+          <a href="index.html" class="logo">
+            <img src="Images/logo.svg" alt="logo" class="logo-img" />
+          </a>
+          <input type="checkbox" id="burger" class="check" />
+          <label for="burger" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="links">
+            <li><a href="shop.html">Hot Deals</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li>
+              <a href="#">Mage Menu<i class="fa-solid fa-angle-down"></i></a>
+              <!-- Mega Menu -->
+              <div class="mage-menu">
+                <div class="sub-menu">
+                  <input type="checkbox" id="menu" class="check">
+                  <label for="menu" class="menu-title">
+                  Fruit &amp; Vegetables<i class="fa-solid fa-angle-down"></i>
+                  </label>
+                  <ul class="list-menu">
+                    <li><a href="#">Meat &amp; Poultry</a></li>
+                    <li><a href="#">Fresh Vegetables</a></li>
+                    <li><a href="#">Herbs &amp; Seasonings</a></li>
+                    <li><a href="#">Cuts &amp; Sprouts</a></li>
+                    <li><a href="#">Exotic Fruits &amp; Veggies</a></li>
+                    <li><a href="#">Packaged Produce</a></li>
+                  </ul>
+                </div>
+                <div class="sub-menu">
+                  <input type="checkbox" id="menu-2" class="check">
+                  <label for="menu-2" class="menu-title">
+                    Breakfast &amp; Dairy<i class="fa-solid fa-angle-down"></i>
+                  </label>
+                  <ul class="list-menu">
+                    <li><a href="#">Milk &amp; Flavoured Milk</a></li>
+                    <li><a href="#">Butter and Margarine</a></li>
+                    <li><a href="#">Eggs Substitutes</a></li>
+                    <li><a href="#">Marmalades</a></li>
+                    <li><a href="#">Sour Cream</a></li>
+                    <li><a href="#">Cheese</a></li>
+                  </ul>
+                </div>
+                <div class="sub-menu">
+                  <input type="checkbox" id="menu-3" class="check">
+                  <label for="menu-3" class="menu-title">
+                  Meat &amp; Seafood<i class="fa-solid fa-angle-down"></i>
+                  </label>
+                  <ul class="list-menu">
+                    <li><a href="#">Breakfast Sausage</a></li>
+                    <li><a href="#">Dinner Sausage</a></li>
+                    <li><a href="#">Chicken</a></li>
+                    <li><a href="#">Sliced Deli Meat</a></li>
+                    <li><a href="#">Wild Caught Fillets</a></li>
+                    <li><a href="#">Crab and Shellfish</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#">Pages<i class="fa-solid fa-angle-down"></i></a>
+              <!-- Pages -->
+              <ul class="page-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Purchase Guide</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">404 Page</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Page Path Section -->
+    <section class="page-path page-path-border">
+      <div class="main-page-path">
+        <a href="index.html" class="home-path">
+          <i class="fa-solid fa-house"></i>
+          Home
+        </a>
+        <i class="fa-solid fa-angle-right right-arrow"></i>
+        Pages
+        <i class="fa-solid fa-angle-right right-arrow"></i>
+        About us
+      </div>
+    </section>
+    <!-- Welcome Section -->
+    <section class="welcome">
+      <div class="md-container">
+        <div class="image">
+          <div class="img"></div>
+        </div>
+        <div class="welcome-content">
+          <h1 class="welcome-title">Welcome to Nest</h1>
+          <p class="welcome-des">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate id est laborum.
+          </p>
+          <p class="welcome-des ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate id est laborum.
+          </p>
+          <div class="welcome-slider">
+            <img src="Images/welcome-img-01.png" alt="" aria-hidden="true">
+            <img src="Images/welcome-img-02.png" alt="" aria-hidden="true">
+            <img src="Images/welcome-img-03.png" alt="" aria-hidden="true" class="img-none">
+            <i class="fa-solid fa-arrow-left arrow left"></i>
+            <i class="fa-solid fa-arrow-right arrow right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  Section -->
+    <!-- Subscribe Section -->
+    <section class="subscribe">
+      <div class="sub-background">
+        <img src="Images/banner-subscribe.png" alt="" aria-hidden="true" class="sub-img" />
+        <div class="sub-content">
+          <h2 class="sub-title">
+            Stay home & get your daily <br />
+            needs from our shop
+          </h2>
+          <p class="sub-des">
+            Start You'r Daily Shopping with 
+            <span class="highlight">Nest Mart</span>
+          </p>
+          <form>
+            <input type="email" name="email" placeholder="Your email address" required class="input-e">
+            <button type="submit" aria-label="submit" class="sub btn">subscribe <i class="fa-regular fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+      <div class="boxes">
+        <div class="box">
+          <div class="image">
+            <img src="Images/features-01.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="content">
+            <h3 class="feature-title">Best prices & offers</h3>
+            <p class="feature-des">Orders $50 or more</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="Images/features-02.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="content">
+            <h3 class="feature-title">Free delivery</h3>
+            <p class="feature-des">24/7 amazing services</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="Images/features-03.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="content">
+            <h3 class="feature-title">Great daily deal</h3>
+            <p class="feature-des">When you sign up</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="Images/features-04.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="content">
+            <h3 class="feature-title">Wide assortment</h3>
+            <p class="feature-des">Mega Discounts</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="Images/features-05.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="content">
+            <h3 class="feature-title">Easy returns</h3>
+            <p class="feature-des">Within 30 days</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="Images/features-06.svg" alt="" aria-hidden="true">
+          </div>
+          <div class="content">
+            <h3 class="feature-title">Safe delivery</h3>
+            <p class="feature-des">Within 30 days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <div class="first-footer">
+        <div class="ff-container">
+          <div class="info-col">
+            <a href="index.html" class="ff-logo">
+            <img src="Images/logo.svg" alt="Logo">
+            </a>
+            <div class="contact-information">
+              <div class="ff-line">
+                <img src="Images/icon-location.svg" alt="icon-location" />
+                <span class="contact-info"><span class="highlight">Address:</span>5171 W Campbell Ave undefined Kent, Utah 53127 United States</span>
+              </div>
+              <div class="ff-line">
+                <img src="Images/icon-contact.svg" alt="icon-contact" />
+                <span class="contact-info"><span class="highlight">Call Us:</span>(+91) - 540-025-124553</span>
+              </div>
+              <div class="ff-line">
+                <img src="Images/icon-email.svg" alt="icon-email" />
+                <span class="contact-info"><span class="highlight">Email:</span>sale@Nest.com</span>
+              </div>
+              <div class="ff-line">
+                <img src="Images/icon-clock.svg" alt="icon-clock" />
+                <span class="contact-info"><span class="highlight">Hours:</span>10:00 - 18:00, Mon - Sat</span>
+              </div>
+            </div>
+          </div>
+          <div class="links-col">
+            <h3 class="title">Company</h3>
+            <ul class="ff-list">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="links-col">
+            <h3 class="title">Account</h3>
+            <ul class="ff-list">
+              <li><a href="#">Sign In</a></li>
+              <li><a href="#">View Cart</a></li>
+              <li><a href="#">My Wishlist</a></li>
+              <li><a href="#">Track My Order</a></li>
+              <li><a href="#">Help Ticket</a></li>
+              <li><a href="#">Shipping Details</a></li>
+              <li><a href="#">Compare Products</a></li>
+            </ul>
+          </div>
+          <div class="links-col">
+            <h3 class="title">Corporate</h3>
+            <ul class="ff-list">
+              <li><a href="#">Become a Vendor</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+              <li><a href="#">Farm Business</a></li>
+              <li><a href="#">Farm Careers</a></li>
+              <li><a href="#">Our Suppliers</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Promotions</a></li>
+            </ul>
+          </div>
+          <div class="links-col">
+            <h3 class="title">Popular</h3>
+            <ul class="ff-list">
+              <li><a href="#">Milk &amp; Flavoured Milk</a></li>
+              <li><a href="#">Butter and Margarine</a></li>
+              <li><a href="#">Eggs Substitutes</a></li>
+              <li><a href="#">Marmalades</a></li>
+              <li><a href="#">Sour Cream and Dips</a></li>
+              <li><a href="#">Tea &amp; Kombucha</a></li>
+              <li><a href="#">Cheese</a></li>
+            </ul>
+          </div>
+          <div class="last-col">
+            <div class="install-box">
+              <h3 class="title">Install App</h3>
+              <p class="des">From App Store or Google Play</p>
+              <div class="install">
+                <a href="#"><img src="Images/app-store.jpg" alt="app store"></a>
+                <a href="#"><img src="Images/google-play.jpg" alt="google play"></a>
+              </div>
+            </div>
+            <div class="payment-box">
+              <p class="payment-title">Secured Payment Gateways</p>
+              <a href="#" title="Payment"><img src="Images/payment-method.png" alt="" aria-hidden="true"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="last-footer">
+        <div class="lf-container">
+          <p class="copyrights">
+            &copy; 2022, <span class="highlight">Nest</span> - HTML eCommerce Template
+            All rights reserved
+          </p>
+          <div class="lines">
+            <div class="line">
+              <img src="Images/phone-call.svg" alt="Phone Call Icon">
+              <div class="line-info">
+                <span class="num highlight">1900 - 666</span>
+                <span class="time">Working 8:00 - 22:00</span>
+              </div>
+            </div>
+            <div class="line">
+              <img src="Images/phone-call.svg" alt="Phone Call Icon">
+              <div class="line-info">
+                <span class="num highlight">1900 - 888</span>
+                <span class="time">24/7 Support Center</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-content">
+            <div class="social">
+              <h4 class="follow">Follow Us</h4>
+              <a href="#" title="Facebook" style="--color: #1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" title="Twitter" style="--color: #1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" title="Instagram" style="--color: #E4405F;"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" title="Pinterest" style="--color: red;"><i class="fa-brands fa-pinterest-p"></i></a>
+              <a href="#" title="Youtube" style="--color: red;"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p>Up to 15% discount on your first subscribe</p>
+          </div>
+        </div>
+      </div>
+      <p class="coded">coded by <a href="https://github.com/AbdulrahmanFE" target="_blank" rel="noopener noreferrer" class="author">ABDULRAHMAN FE</a></p>
+    </footer>
+  </body>
+</html>

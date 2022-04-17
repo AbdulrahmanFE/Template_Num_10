@@ -403,6 +403,14 @@
     margin-right: 6px;
     vertical-align: baseline;
   }
+  section.page-path-border {
+    padding: 20px;
+    background-color: #FFF;
+    border-bottom: 1px solid #ececec;
+  }
+  section.page-path-border .main-page-path {
+    font-family: var(--BodyFontsFamily);
+  }
 /* ----- Making The Page Path Section Responsive ----- */
   @media (min-width: 992px) and (max-width: 1150px){
     section.page-path .main-page-path-content {

@@ -1,0 +1,134 @@
+  .md-container {
+    width: 85%;
+    margin: auto;
+  }
+  @media (max-width: 675px) {
+    .md-container {
+      width: 100%;
+    }
+  }
+/* Styling The Welcome Section */
+  section.welcome {
+    padding: 50px 12px;
+  }
+  section.welcome .md-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.welcome .image {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 700px;
+    padding-right: 25px;
+  }
+  section.welcome .image .img {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 15px;
+  }
+  section.welcome .welcome-content {
+    padding-left: 25px;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  section.welcome .welcome-content .welcome-title {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  section.welcome .welcome-content .welcome-des {
+    color: var(--MainTextColor);
+    font-size: 16px;
+    font-family: var(--LatoFontsFamily);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  section.welcome .welcome-content .welcome-des:last-of-type {
+    margin-bottom: 50px;
+  }
+  section.welcome .welcome-content .welcome-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+  }
+  section.welcome .welcome-content .welcome-slider > img {
+    width: calc(97% / 3);
+    border-radius: 8px;
+  }
+  section.welcome .welcome-content .welcome-slider .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F2F3F4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+    color: var(--MainColor);
+    cursor: pointer;
+    transition: var(--MainTransition);
+  }
+  section.welcome .welcome-content .welcome-slider .arrow:hover {
+    background-color: var(--MainColor);
+    color: #F2F3F4;
+  }
+  section.welcome .welcome-content .welcome-slider .arrow.left {
+    left: -20px;
+  }
+  section.welcome .welcome-content .welcome-slider .arrow.right {
+    right: -20px;
+  }
+/* ----- Making The Welcome Section Responsive ----- */
+  @media (max-width: 991px) {
+    section.welcome .md-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    section.welcome .image,
+    section.welcome .welcome-content {
+      width: 100%;
+      padding: 0;
+    }
+    section.welcome .image {
+      height: 600px;
+    }
+  }
+  @media (max-width: 767px) {
+    section.welcome .image {
+      height: 500px;
+    }
+    section.welcome .welcome-content .welcome-title {
+      font-size: 32px;
+    }
+    section.welcome .welcome-content .welcome-slider .arrow.left {
+      left: -8px;
+    }
+    section.welcome .welcome-content .welcome-slider .arrow.right {
+      right: -8px;
+    }
+  }
+  @media (max-width: 425px) {
+    section.welcome .image {
+      height: 400px;
+    }
+    section.welcome .welcome-content .welcome-des {
+      font-size: 14px;
+    }
+    section.welcome .welcome-content .welcome-slider > img.img-none {
+      display: none;
+    }
+    section.welcome .welcome-content .welcome-slider > img {
+      width: calc(97% / 2);
+    }
+  }
+/* Styling The  Section */
+
+/* ----- Making The  Section Responsive ----- */

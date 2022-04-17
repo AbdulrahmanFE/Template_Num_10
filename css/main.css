@@ -1861,7 +1861,7 @@
 /* Styling The First Footer */
   footer .first-footer {
     padding: var(--MainPaddingTop) 0 var(--MainPaddingBottom);
-    border-top: 1px solid #20c997;
+    border-top: 1px solid #BCE3C9;
     font-size: 15px;
     font-family: var(--LatoFontsFamily);
   }
