@@ -9,7 +9,7 @@
   }
 /* Styling The Welcome Section */
   section.welcome {
-    padding: 50px 12px;
+    padding: 50px 12px var(--MainPaddingBottom);
   }
   section.welcome .md-container {
     display: flex;
@@ -115,18 +115,257 @@
       right: -8px;
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 575px) {
     section.welcome .image {
       height: 400px;
     }
     section.welcome .welcome-content .welcome-des {
       font-size: 14px;
     }
-    section.welcome .welcome-content .welcome-slider > img.img-none {
+    section.welcome .welcome-content .welcome-slider > img.img-none-3 {
       display: none;
     }
     section.welcome .welcome-content .welcome-slider > img {
-      width: calc(97% / 2);
+      width: calc(98% / 2);
+    }
+  }
+  @media (max-width: 375px) {
+    section.welcome .welcome-content .welcome-slider > img.img-none-2 {
+      display: none;
+    }
+    section.welcome .welcome-content .welcome-slider > img {
+      width: calc(99% / 1);
+    }
+  }
+/* Styling The Provide Section */
+  section.provide {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.provide .provide-title {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    background: url(../Images/wave-icon.png) no-repeat center bottom;
+  }
+  section.provide .provide-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    gap: 20px;
+  }
+  section.provide .provide-cards .provide-card {
+    background-color: #FFF;
+    padding: 50px 25px;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    text-align: center;
+  }
+  section.provide .provide-card img {
+    width: 100px;
+    margin-bottom: 25px;
+  }
+  section.provide .provide-card .card-title {
+    font-size: 24px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 25px;
+  }
+  section.provide .provide-card .card-des {
+    color: var(--MainTextColor);
+    font-family: var(--LatoFontsFamily);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  section.provide .provide-card .card-link {
+    color: var(--MainColor);
+    font-weight: 600;
+    transition: var(--MainTransition);
+  }
+  section.provide .provide-card .card-link:hover {
+    color: var(--MainAltColor);
+  }
+/* ----- Making The Provide Section Responsive ----- */
+  @media (max-width: 991px) {
+    section.provide .provide-cards {
+      grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+    }
+  }
+  @media (max-width: 767px) {
+    section.provide .provide-cards .provide-card {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 575px) {
+    section.provide .provide-cards .provide-card {
+      padding: 40px 20px;
+    }
+    section.provide .provide-card img {
+      width: 75px;
+    }
+    section.provide .provide-card .card-title {
+      font-size: 20px;
+    }
+    section.provide .provide-card .card-des {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 375px) {
+    section.provide .provide-cards {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+/* Styling The Performance Section */
+  section.performance {
+    padding: 45px 12px 50px;
+  }
+  section.performance .first-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  section.performance .first-container .images {
+    width: 58%;
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+  }
+  section.performance .first-container .images .first-img {
+    height: 350px;
+    width: 35%;
+    border-radius: 15px;
+    background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+    margin-right: 40px;
+  }
+  section.performance .first-container .images .sec-img {
+    height: 525px;
+    width: 65%;
+    border-radius: 15px;
+    background-image: linear-gradient( 135deg, #FAB2FF 10%, #1904E5 100%);
+  }
+  section.performance .first-container .content {
+    width: 42%;
+  }
+  section.performance .first-container .content .per-title {
+    font-size: 24px;
+    color: #B6B6B6;
+    margin-bottom: 20px;
+  }
+  section.performance .first-container .content .per-des {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--MainHeadingColor);
+    margin-bottom: 40px;
+  }
+  section.performance .first-container .content .des {
+    color: var(--MainTextColor);
+    font-family: var(--LatoFontsFamily);
+    line-height: 1.5;
+  }
+  section.performance .first-container .content .first.des {
+    margin-bottom: 20px;
+  }
+  section.performance .sec-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+  }
+  section.performance .sec-container .col-title {
+    font-size: 32px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 30px;
+  }
+  section.performance .sec-container .col-des {
+    color: var(--MainTextColor);
+    font-family: var(--LatoFontsFamily);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+/* ----- Making The Performance Section Responsive ----- */
+  @media (max-width: 1199px) {
+    section.performance .first-container .images .first-img {
+      display: none;
+    }
+    section.performance .first-container .images .sec-img {
+      width: 100%;
+    }
+  }
+  @media (max-width: 991px) {
+    section.performance .first-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    section.performance .first-container .images, 
+    section.performance .first-container .content {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    section.performance .first-container .images .sec-img {
+      height: 350px;
+    }
+  }
+  @media (max-width: 575px) {
+    section.performance .first-container .content .per-des {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 375px) {
+    section.performance .sec-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+/* Styling The Stats Section */
+  section.stats {
+    background: url(../Images/stats-bg.png) no-repeat center center;
+    width: 100%;
+    padding: 100px 0;
+    z-index: 1;
+    position: relative;
+  }
+  section.stats::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(29 151 108 / 90%), rgb(29 151 108 / 95%));
+    z-index: -1;
+  }
+  section.stats .stats-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+  }
+  section.stats .stats-container .box {
+    width: calc(95% / 5);
+  }
+  section.stats .stats-container .box span {
+    color: #FFF;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+  }
+  section.stats .stats-container .box span.stats-num {
+    font-size: 48px;
+  }
+  section.stats .stats-container .box span.stats-title {
+    font-size: 20px;
+  }
+/* ----- Making The Stats Section Responsive ----- */
+  @media (max-width: 991px) {
+    section.stats .stats-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    section.stats .stats-container .box {
+      width: 100%;
     }
   }
 /* Styling The  Section */
