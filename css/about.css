@@ -141,14 +141,6 @@
   section.provide {
     padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
   }
-  section.provide .provide-title {
-    font-size: 40px;
-    color: var(--MainHeadingColor);
-    text-align: center;
-    padding-bottom: 30px;
-    margin-bottom: 40px;
-    background: url(../Images/wave-icon.png) no-repeat center bottom;
-  }
   section.provide .provide-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
@@ -160,6 +152,22 @@
     border: 1px solid #ececec;
     border-radius: 8px;
     text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  section.provide .provide-cards .provide-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(248, 248, 248);
+    z-index: -1;
+    transition: var(--MainTransition);
+  }
+  section.provide .provide-cards .provide-card:hover::before {
+    width: 100%;
   }
   section.provide .provide-card img {
     width: 100px;
@@ -344,7 +352,7 @@
     padding: 0 20px;
   }
   section.stats .stats-container .box {
-    width: calc(95% / 5);
+    width: calc(98% / 5);
   }
   section.stats .stats-container .box span {
     color: #FFF;
@@ -368,6 +376,123 @@
       width: 100%;
     }
   }
-/* Styling The  Section */
-
-/* ----- Making The  Section Responsive ----- */
+/* Styling The Team Section */
+  section.team {
+    padding: 50px 12px var(--MainPaddingBottom);
+  }
+  section.team .content-container {
+    display: flex;
+  }
+  section.team .team-content {
+    width: 33.333%;
+    padding-right: 12px;
+  }
+  section.team .team-content .team-title {
+    font-size: 16px;
+    color: var(--MainColor);
+    margin-bottom: 6px;
+  }
+  section.team .team-content .team-des {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 30px;
+  }
+  section.team .team-content .des {
+    font-family: var(--LatoFontsFamily);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--MainTextColor);
+    margin-bottom: 30px;
+  }
+  section.team .team-content .view-btn {
+    background: linear-gradient(to right, var(--MainAltColor) 50%, var(--MainColor) 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    padding: 14px 28px;
+    width: fit-content;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  section.team .team-content .view-btn:hover {
+    background-position: left bottom;
+  }
+  section.team .team-members {
+    width: 66.667%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    gap: 20px;
+  }
+  section.team .team-members .member-box {
+    width: 50%;
+    max-height: 500px;
+  }
+  section.team .team-members .member-box .img {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+  }
+  section.team .team-members .member-box .member-content {
+    text-align: center;
+    background-color: #FFF;
+    -webkit-box-shadow: 0px 5px 14px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px 5px 14px rgb(0 0 0 / 10%);
+    box-shadow: 0px 5px 14px rgb(0 0 0 / 10%);
+    padding: 30px 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-60px);
+    transition: var(--MainTransition) ease;
+  }
+  section.team .team-members .member-box:hover .member-content {
+    transform: translateY(-70px);
+  }
+  section.team .team-members .member-box .member-content .title {
+    font-size: 20px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 6px;
+  }
+  section.team .team-members .member-box .member-content .position {
+    font-size: 17px;
+    color: var(--MainTextColor);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  section.team .team-members .member-box .member-content .social a {
+    display: inline-block;
+    padding: 0 6px;
+    color: var(--MainColor);
+    font-size: 17px;
+    transition: var(--MainTransition);
+  }
+  section.team .team-members .member-box .member-content .social a:hover {
+    color: var(--color);
+  }
+/* ----- Making The Team Section Responsive ----- */
+  @media (max-width: 1075px) {
+    section.team .content-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    section.team .team-content,
+    section.team .team-members {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  @media (max-width: 700px) {
+    section.team .team-members {
+      flex-direction: column;
+    }
+    section.team .team-members .member-box {
+      width: 100%;
+      max-width: 400px;
+    }
+  }

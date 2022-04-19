@@ -860,3 +860,19 @@
       padding: 10px 16px;
     }
   }
+/* ------- Components Section Title With A Wave Icon ------- */
+  .main-section-title-wave {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    background: url(../Images/wave-icon.png) no-repeat center bottom;
+    background-size: 150px;
+  }
+/* ----- Making The Section Title With A Wave Icon Responsive ----- */
+  @media (max-width: 767px) {
+    .main-section-title-wave {
+      font-size: 30px;
+    }
+  }
