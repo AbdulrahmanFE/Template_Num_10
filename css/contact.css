@@ -1,0 +1,222 @@
+  .md-container {
+    width: 85%;
+    margin: auto;
+  }
+  @media (max-width: 675px) {
+    .md-container {
+      width: 100%;
+    }
+  }
+/* Styling The Help Section */
+  section.help {
+    padding: 50px 0 var(--MainPaddingBottom);
+  }
+  section.help .md-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  section.help .first-container {
+    width: 33.333%;
+    padding: 0 12px;
+  }
+  section.help .first-container .help-title {
+    font-size: 24px;
+    color: var(--MainColor);
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  section.help .first-container .help-des {
+    font-size: 48px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 30px;
+  } 
+  section.help .first-container .des,
+  section.help .sec-container .des {
+    color: var(--MainTextColor);
+    line-height: 1.5;
+    font-family: var(--LatoFontsFamily);
+  }
+  section.help .first-container .des:first-of-type {
+    margin-bottom: 20px;
+  }
+  section.help .sec-container {
+    width: 66.667%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  section.help .sec-container .box {
+    width: 50%;
+    padding: 0 12px;
+  }
+  section.help .sec-container .box .title {
+    color: var(--MainHeadingColor);
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+/* ----- Making The Help Section Responsive ----- */
+  @media (max-width: 1124px) {
+    section.help .md-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+    }
+    section.help .first-container,
+    section.help .sec-container {
+      width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    section.help .sec-container {
+      flex-direction: column;
+    }
+    section.help .sec-container .box {
+      width: 100%;
+    }
+  }
+  @media (max-width: 575px) {
+    section.help .first-container .help-des {
+      font-size: 30px;
+    }
+  }
+/* Styling The Map Section */
+  section.map {
+    padding: var(--MainPaddingTop) 12px var(--MainPaddingBottom);
+  }
+  section.map .map-container iframe {
+    height: 350px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  section.map .map-container iframe .place-card.place-card-large {
+    display: none !important;
+  }
+  section.map .md-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px 20px;
+  }
+  section.map .md-container .col {
+    width: 33.333%;
+  }
+  section.map .md-container .col .title {
+    color: var(--MainColor);
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  section.map .md-container .col span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: var(--LatoFontsFamily);
+    color: var(--MainTextColor);
+  }
+  section.map .md-container .col .view.btn {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--MainColor);
+    padding: 10px 18px;
+    color: #FFF;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  section.map .md-container .col .view.btn:hover {
+    transform: translateY(-4px);
+    background-color: var(--MainAltColor);
+  }
+  section.map .md-container .col .view.btn i {
+    margin-right: 6px;
+  }
+/* ----- Making The Map Section Responsive ----- */
+  @media (max-width: 991px) {
+    section.map .md-container {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    section.map .md-container .col {
+      width: auto;
+      min-width: 240px;
+    }
+  }
+/* Styling The Contact Section */
+  section.contact {
+    padding: var(--MainPaddingTop) 0 var(--MainPaddingBottom);
+  }
+  section.contact .md-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  section.contact .contact-content {
+    width: 66.667%;
+    padding: 0 12px;
+  }
+  section.contact .contact-content .contact-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--MainColor);
+    margin-bottom: 10px;
+  }
+  section.contact .contact-content .contact-des {
+    font-size: 40px;
+    color: var(--MainHeadingColor);
+    margin-bottom: 10px;
+  }
+  section.contact .contact-content .contact-note {
+    color: #B6B6B6;
+    font-family: var(--LatoFontsFamily);
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  section.contact .contact-content .contact-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px 15px;
+  }
+  section.contact .contact-content .contact-form .main-input {
+    border: 1px solid #ececec;
+    padding: 20px 10px 20px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--MainHeadingColor);
+    caret-color: var(--MainHeadingColor);
+    border-radius: 10px;
+    transition: var(--MainTransition);
+  }
+  section.contact .contact-content .contact-form .main-input:focus {
+    outline: none;
+    border-color: #BCE3C9;
+  }
+  section.contact .contact-content .contact-form .main-input::placeholder {
+    color: var(--MainTextColor);
+    font-weight: 500;
+    transition: var(--MainTransition);
+  }
+  section.contact .contact-content .contact-form .main-input:focus-within::placeholder {
+    opacity: 0;
+  }
+  section.contact .contact-content .contact-form input {
+    width: 49%;
+  }
+  section.contact .contact-content .contact-form textarea {
+    resize: vertical;
+    width: 100%;
+    min-height: 200px;
+  }
+  section.contact .contact-content .contact-form .submit.btn {
+    padding: 20px;
+    font-weight: 600;
+    background-color: var(--MainHeadingColor);
+    color: #FFF;
+    border-radius: 10px;
+  }
+  section.contact .contact-content .contact-form .submit.btn:hover {
+    background-color: var(--MainColor);
+  }
+/* ----- Making The Contact Section Responsive ----- */

@@ -320,6 +320,9 @@
     section.performance .first-container .content .per-des {
       font-size: 30px;
     }
+    section.performance .sec-container .col-title {
+      font-size: 26px;
+    }
   }
   @media (max-width: 375px) {
     section.performance .sec-container {
