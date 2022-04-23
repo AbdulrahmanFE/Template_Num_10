@@ -64,24 +64,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-/* Small Screen */
-  @media (min-width: 768px) {
-    .container{
-      width: 750px;
-    }
-  }
-/* Medium Screen */
-  @media (min-width: 992px) {
-    .container{
-      width: 970px;
-    }
-  }
-/* Lager Screen*/
-  @media (min-width: 1200px) {
-    .container{
-      width: 1170px;
-    }
-  }
 /* Styling The Header Section */
   header {
     position: relative;
@@ -816,7 +798,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 15px;
+    right: 12px;
     cursor: pointer;
   }
   header .mobile.header .check + .burger span {
@@ -1046,9 +1028,6 @@
     padding-top: var(--MainPaddingTop);
     padding-bottom: var(--MainPaddingBottom);
     position: relative;
-  }
-  section.slider .container {
-    width: 100%;
   }
   section.slider .slider-background {
     width: 100%;
