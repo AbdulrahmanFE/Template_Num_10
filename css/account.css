@@ -1,5 +1,89 @@
 /* Styling The Account Section */
   section.account {
-    padding: 125px 12px 100px;
+    padding: 125px 0 100px;
+  }
+  section.account .md-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px 0;
+  }
+  section.account .dashboard-container {
+    width: 25%;
+    min-width: 300px;
+    padding: 0 12px;
+  }
+  section.account .dashboard-menu {
+    min-width: 240px;
+  }
+  section.account .dashboard-menu li {
+    display: block;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  section.account .dashboard-menu li:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  section.account .dashboard-menu li .btn {
+    width: 100%;
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--MainTextColor);
+    text-align: left;
+  }
+  section.account .dashboard-menu li .btn.active {
+    background-color: var(--MainColor);
+    color: #FFF;
+  }
+  section.account .dashboard-menu li i {
+    margin-right: 10px;
+    font-size: 18px;
+    opacity: 0.5;
+  }
+  section.account .dashboard-menu li .btn.active i {
+    opacity: 1;
+  }
+  section.account .dashboard-content {
+    width: 75%;
+    padding: 0 12px 0 50px;
+  }
+  section.account .dashboard-content .dashboard-text {
+    padding: 0 12px;
+  }
+  section.account .dashboard-content .user-title {
+    font-size: 32px;
+    color: var(--MainHeadingColor);
+    margin: 10px 0 20px;
+  }
+  section.account .dashboard-content .note {
+    color: var(--MainTextColor);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  section.account .dashboard-content .note a {
+    color: var(--MainColor);
+    transition: var(--MainTransition);
+  }
+  section.account .dashboard-content .note a:hover {
+    color: var(--MainAltColor);
   }
 /* ----- Making The Account Section Responsive ----- */
+  @media (max-width: 1024px) {
+    section.account .md-container {
+      flex-wrap: wrap;
+    }
+    section.account .dashboard-container,
+    section.account .dashboard-content {
+      width: 100%;
+    }
+    section.account .dashboard-container {
+      min-width: auto;
+    }
+    section.account .dashboard-content {
+      padding: 0 12px;
+    }
+    section.account .dashboard-content .dashboard-text {
+      padding: 0;
+    }
+  }
