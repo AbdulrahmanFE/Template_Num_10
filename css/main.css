@@ -793,7 +793,7 @@
     display: none;
   }
   header .mobile.header .check + .burger {
-    width: 26px;
+    width: 30px;
     height: 18px;
     position: absolute;
     top: 50%;
@@ -805,9 +805,9 @@
     width: 100%;
     height: 4px;
     background-color: black;
-    border-radius: 5px;
+    border-radius: 4px;
     position: absolute;
-    left: 0;
+    right: 0;
     transition: var(--MainTransition);
   }
   header .mobile.header .check + .burger span:first-child {
@@ -834,24 +834,25 @@
   header .mobile.header .links {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translate(-50%, 20px);
-    width: 75%;
+    transform: translateY(20px);
+    left: 0;
+    width: 100%;
     padding: 10px;
     background-color: #FFF;
     border: 1px solid #ececec;
-    z-index: 99;
     -webkit-box-shadow: 0px 4px 10px rgb(0 0 0 / 6%);
     -moz-box-shadow: 0px 4px 10px rgb(0 0 0 / 6%);
     box-shadow: 0px 4px 10px rgb(0 0 0 / 6%);
     border-radius: 0 0 4px 4px;
     visibility: hidden;
     opacity: 0;
-    transition: var(--MainTransition) linear;
+    z-index: -11;
+    transition: var(--MainTransition);
   }
   header .mobile.header .check:checked ~ .links {
     visibility: visible;
     opacity: 1;
+    z-index: 11;
   }
   header .mobile.header ul > li {
     display: block;
@@ -872,7 +873,7 @@
   header .mobile.header .links li .page-list {
     display: none;
     padding: 10px 0 0 10px;
-    transition: var(--MainTransition) linear;
+    transition: var(--MainTransition);
   }
   header .mobile.header .links li:hover .mage-menu,
   header .mobile.header .links li:hover .page-list {
